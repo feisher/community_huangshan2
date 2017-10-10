@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yusong.club.ui.school.teacher.activity.EducationActivity">
+
+    <include layout="@layout/layout_school_title" />
+
+    <include layout="@layout/not_data_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/lin_title"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="247px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="207px"
+            android:layout_height="207px"
+            android:layout_margin="20px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/video_small" />
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="34px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_titles"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="练一练"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老师：徐颖白"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color_4"
+                    android:textSize="24px" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_teacher_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginTop="15px"
+                android:text="小学一年级（语文）"
+                android:textColor="@color/font_color_4"
+                android:textSize="24px" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="32px"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="15px"
+                android:numStars="5"
+                android:progressTint="#ff9001"
+                android:rating="4.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_play"
+                    android:layout_width="150px"
+                    android:layout_height="66px"
+                    android:background="@drawable/select_orange"
+                    android:text="播放"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnA_delete"
+                    android:layout_width="150px"
+                    android:layout_height="66px"
+                    android:layout_marginLeft="11px"
+                    android:background="@drawable/select_red"
+                    android:text="删除"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_choose"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_one"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_linear"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_one"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="视频介绍"
+                android:textColor="@color/color_blue"
+                android:textSize="26px" />
+
+            <ImageView
+                android:id="@+id/im_one"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/line_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_two"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_linear"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="视频推荐"
+                android:textColor="@color/font_color_4"
+                android:textSize="26px" />
+
+            <ImageView
+                android:id="@+id/im_two"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:scaleType="fitXY"
+                android:src="@mipmap/line_blue"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_video"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+</LinearLayout>

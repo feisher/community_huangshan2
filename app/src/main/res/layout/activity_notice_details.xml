@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notice_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:textColor="@color/font_color_6"
+                android:textSize="32px"
+                android:padding="30px"
+                tools:text="标题标题标题" />
+
+            <TextView
+                android:id="@+id/notice_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:textColor="@color/font_color_9"
+                android:textSize="24px"
+                android:singleLine="true"
+                tools:text="2016-06-06" />
+
+            <TextView
+                android:id="@+id/notice_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20px"
+                android:padding="30px"
+                android:textColor="@color/font_color_1"
+                android:textSize="28px"
+                tools:text="的第十六届发牢骚杜绝浪费聚少离多解放路三等奖分类时代峻峰李双江撒旦飞洒剧烈的减肥" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

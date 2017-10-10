@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="112px"
+                android:layout_marginTop="12px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="71px"
+                    android:layout_height="71px"
+                    android:layout_marginLeft="29px"
+                    android:layout_marginRight="20px"
+                    android:src="@mipmap/school_four" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="张老师"
+                            android:textColor="@color/font_color_2"
+                            android:textSize="33px" />
+
+                        <TextView
+                            android:id="@+id/tv_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30px"
+                            android:text="(值班老师)"
+                            android:textColor="@color/font_color_2"
+                            android:textSize="33px"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_job"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15px"
+                            android:text="语文老师"
+                            android:textColor="@color/font_color_4"
+                            android:textSize="24px" />
+
+                        <TextView
+                            android:id="@+id/tv_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:layout_marginTop="15px"
+                            android:text="18201402790"
+                            android:textColor="@color/font_color_4"
+                            android:textSize="24px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.yusong.club.ui.school.teacher.view.SlipButton
+                    android:id="@+id/slip_button"
+                    android:layout_width="82px"
+                    android:layout_height="62px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="12px" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="120px"
+                android:layout_marginTop="5px"
+                android:background="@color/business_bg" />
+</LinearLayout>

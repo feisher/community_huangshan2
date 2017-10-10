@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120px"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/head_image"
+                            android:layout_width="80px"
+                            android:layout_height="80px"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="22px" />
+
+                        <TextView
+                            android:id="@+id/user_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="121px"
+                            android:layout_marginRight="150px"
+                            android:layout_marginTop="31px"
+                            android:singleLine="false"
+                            android:textColor="@color/black"
+                            android:textSize="28px" />
+
+                        <TextView
+                            android:id="@+id/time_and_adderss_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="121px"
+                            android:layout_marginRight="150px"
+                            android:layout_marginTop="72px"
+                            android:singleLine="false"
+                            android:textColor="#999999"
+                            android:textSize="24px" />
+
+                        <!--<Button-->
+                            <!--android:id="@+id/lianxi_ta_button"-->
+                            <!--android:layout_width="119px"-->
+                            <!--android:layout_height="56px"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--android:layout_marginRight="17px"-->
+                            <!--android:background="@drawable/order_item_quxiao_button"-->
+                            <!--android:text="联系他"-->
+                            <!--android:textSize="24px" />-->
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/used_content_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21px"
+                        android:layout_marginRight="21px"
+                        android:textColor="@color/font_color_3"
+                        android:textSize="26px" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25px"
+                        android:layout_marginLeft="21px"
+                        android:layout_marginRight="21px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/now_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥0.00"
+                            android:textColor="#FF5E28"
+                            android:textSize="40px" />
+
+                        <TextView
+                            android:id="@+id/old_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10px"
+                            android:gravity="bottom"
+                            android:text="原价 ￥0.00"
+                            android:textColor="#AFAFAF"
+                            android:textSize="26px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/image_recyclervew"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="22px"
+                        android:layout_marginRight="22px" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/liuyanqu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20px"
+                        android:background="#EEEEEE" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="80px"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="20px"
+                        android:text="留言区"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/message_recyclervew"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+
+    <Button
+        android:id="@+id/pinlun_button"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/title_color"
+        android:text="我要留言"
+        android:textColor="@color/white"
+        android:textSize="30px" />
+
+</LinearLayout>

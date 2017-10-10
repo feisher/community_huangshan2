@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/app_title"/>
+
+    <com.youth.banner.Banner
+        android:id="@+id/yuyue_details_banner"
+        android:layout_width="640px"
+        android:layout_height="287px"/>
+
+    <LinearLayout
+        android:layout_width="640px"
+        android:layout_height="198px"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32px"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="22px">
+
+            <TextView
+                android:id="@+id/details_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="28px"
+                android:textColor="@color/font_color_3"
+                android:text="杭州西湖小区"/>
+
+            <ImageView
+                android:layout_width="25px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="481px"
+                android:src="@mipmap/weizhi_huise"/>
+
+            <TextView
+                android:id="@+id/juli_details_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="520px"
+                android:gravity="center_vertical"
+                android:textSize="28px"
+                android:textColor="@color/font_color_4"
+                android:text="22.4km"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34px"
+            android:layout_marginTop="27px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="34px"
+                android:layout_height="34px"
+                android:layout_marginLeft="22px"
+                android:src="@mipmap/shijian"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11px"
+                android:gravity="center_vertical"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="开放时间:"/>
+
+            <TextView
+                android:id="@+id/kaifang_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11px"
+                android:gravity="center_vertical"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="上午09:00-下午17:00"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="23px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:src="@mipmap/shiyongzhong"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="使用中:"/>
+
+            <TextView
+                android:id="@+id/shiyongzhong_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="个"/>
+
+            <ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:layout_marginLeft="31px"
+                android:src="@mipmap/kongxian"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="空闲:"/>
+
+            <TextView
+                android:id="@+id/kongxian_details_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="个"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="368px"
+        android:layout_marginTop="22px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28px"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="20px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_3"
+            android:text="选择时长"/>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="111px"
+            android:layout_marginTop="69px"
+            android:orientation="horizontal">
+
+            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+                android:id="@+id/pay_one"
+                android:layout_width="187px"
+                android:layout_height="111px"
+                android:layout_marginLeft="23px"
+                android:orientation="vertical"
+                android:background="@drawable/shape_of_pay_putdown"/>
+
+            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+                android:id="@+id/pay_two"
+                android:layout_width="187px"
+                android:layout_height="111px"
+                android:layout_marginLeft="17px"
+                android:orientation="vertical"
+                android:background="@drawable/shape_of_pay_putdown"/>
+
+            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+                android:id="@+id/pay_three"
+                android:layout_width="187px"
+                android:layout_height="111px"
+                android:layout_marginLeft="17px"
+                android:layout_marginRight="23px"
+                android:orientation="vertical"
+                android:background="@drawable/shape_of_pay_putdown"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28px"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="208px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_3"
+            android:text="付款方式  "/>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="81px"
+            android:layout_marginTop="258px"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/zhilian_layout_btn"
+                android:layout_width="187px"
+                android:layout_height="81px"
+                android:layout_marginLeft="22px"
+                android:background="@drawable/shape_of_pay_press">
+
+                <ImageView
+                    android:layout_width="49px"
+                    android:layout_height="49px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:src="@mipmap/zhilian_pay"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="76px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="智联钱包"/>
+
+                <ImageView
+                    android:id="@+id/zhilian_press"
+                    android:visibility="visible"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/xuanzhong"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weixin_layout_btn"
+                android:layout_width="187px"
+                android:layout_height="81px"
+                android:layout_marginLeft="17px"
+                android:background="@drawable/shape_of_pay_putdown">
+
+                <ImageView
+                    android:layout_width="48px"
+                    android:layout_height="42px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:src="@mipmap/weixing_pay"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="76px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="微信支付"/>
+
+                <ImageView
+                    android:id="@+id/weixin_press"
+                    android:visibility="gone"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/xuanzhong"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhifubao_layout_btn"
+                android:layout_width="187px"
+                android:layout_height="81px"
+                android:layout_marginLeft="17px"
+                android:layout_marginRight="22px"
+                android:background="@drawable/shape_of_pay_putdown">
+
+                <ImageView
+                    android:layout_width="53px"
+                    android:layout_height="68px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25px"
+                    android:src="@mipmap/zhifubao_pay"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="88px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="支付宝"/>
+
+                <ImageView
+                    android:id="@+id/zhifubao_press"
+                    android:visibility="gone"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/xuanzhong"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/liji_pay"
+        android:layout_width="597px"
+        android:layout_height="81px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:background="@color/title_color"
+        android:textSize="34px"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="立即付款"/>
+
+
+</LinearLayout>

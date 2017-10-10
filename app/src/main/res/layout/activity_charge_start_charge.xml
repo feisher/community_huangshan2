@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title"/>
+
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="483px"
+        android:background="@color/title_color">
+
+        <ImageView
+            android:layout_width="125px"
+            android:layout_height="163px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42px"
+            android:src="@mipmap/chatou"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="26px"
+            android:layout_marginTop="244px"
+            android:textSize="30px"
+            android:textColor="@color/white"
+            android:text="支付成功!请接山充电头,开始充电！"/>
+
+        <Button
+            android:id="@+id/start_charge_button"
+            android:layout_width="415px"
+            android:layout_height="98px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="334px"
+            android:background="@drawable/start_charge_select"
+            android:textSize="40px"
+            android:textColor="@color/title_color"
+            android:text="开始充电"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="640px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="30px"
+                android:layout_marginLeft="22px"
+                android:src="@mipmap/yuyue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15px"
+                android:textSize="30px"
+                android:textColor="@color/font_color_3"
+                android:text="预约信息"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_marginTop="32px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="下单时间 : "/>
+
+            <TextView
+                android:id="@+id/yuyue_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_marginTop="17px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="预约时长 : "/>
+
+            <TextView
+                android:id="@+id/yuyue_shichang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_marginTop="17px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="预约站点 : "/>
+
+            <TextView
+                android:id="@+id/yuyue_zhandian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68px"
+            android:layout_marginTop="17px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="预约人 : "/>
+
+            <TextView
+                android:id="@+id/yuyue_ren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/business_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_school_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="107px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="79px"
+                android:layout_height="107px"
+                android:orientation="vertical">
+
+                <TextView style="@style/class_date" />
+
+                <!--          <TextView
+                              style="@style/class_date2"
+                              android:layout_marginTop="10px" />-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_one"
+                    style="@style/class_date"
+                    android:text="星期一" />
+
+                <TextView
+                    android:id="@+id/tv_date_one"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-12" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_one"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_select_one_new"
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:background="#FF9001"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_two"
+                    style="@style/class_date"
+                    android:text="星期二" />
+
+                <TextView
+                    android:id="@+id/tv_date_two"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-13" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_two"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_three"
+                    style="@style/class_date"
+                    android:text="星期三" />
+
+                <TextView
+                    android:id="@+id/tv_date_three"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-4" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_three"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_four"
+                    style="@style/class_date"
+                    android:text="星期四" />
+
+                <TextView
+                    android:id="@+id/tv_date_four"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-5" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_four"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_five"
+                    style="@style/class_date"
+                    android:text="星期五" />
+
+                <TextView
+                    android:id="@+id/tv_date_five"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-16" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_five"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_six"
+                    style="@style/class_date"
+                    android:text="星期六" />
+
+                <TextView
+                    android:id="@+id/tv_date_six"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-16" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_six"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="107px"
+            android:layout_weight="1"
+            android:background="@color/business_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_xing_seven"
+                    style="@style/class_date"
+                    android:text="星期日" />
+
+                <TextView
+                    android:id="@+id/tv_date_seven"
+                    style="@style/class_date2"
+                    android:layout_marginTop="10px"
+                    android:text="12-16" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_select_seven"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="427px">
+
+        <LinearLayout
+            android:layout_width="79px"
+            android:layout_height="427px"
+            android:background="@color/business_bg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_one"
+                style="@style/class_date3"
+                android:text="第一节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_two"
+                style="@style/class_date3"
+                android:text="第二节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_three"
+                style="@style/class_date3"
+                android:text="第三节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_four"
+                style="@style/class_date3"
+                android:text="第四节" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_ke_one"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4" />
+
+            <ImageView
+                android:id="@+id/iv_ke_two"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4" />
+
+            <ImageView
+                android:id="@+id/iv_ke_three"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4" />
+
+            <ImageView
+                android:id="@+id/iv_ke_four"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="430px"
+            android:layout_weight="5"
+            android:background="@color/business_bg">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="430px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:background="@color/business_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/font_color_4"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="下午"
+            android:textColor="@color/font_color_4"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/font_color_4"
+        android:paddingLeft="100px"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="427px">
+
+        <LinearLayout
+            android:layout_width="79px"
+            android:layout_height="320px"
+            android:background="@color/business_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ke_five"
+                style="@style/class_date3"
+                android:text="第一节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_six"
+                style="@style/class_date3"
+                android:text="第二节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ke_seven"
+                style="@style/class_date3"
+                android:text="第三节" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_ke_five"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_ke_six"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_ke_seven"
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="321px"
+            android:background="@color/business_bg"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view2"
+                android:layout_width="match_parent"
+                android:layout_height="320px" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/font_color_4"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

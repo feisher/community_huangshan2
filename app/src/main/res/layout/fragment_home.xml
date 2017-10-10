@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.yusong.club.utils.bga.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_modulename_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/lin_all_views"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="300px" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="15px"
+                android:paddingTop="15px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#efeff4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="241px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="0dp"
+                    android:layout_height="241px"
+                    android:layout_weight="1"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="#585858"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+                    <LinearLayout
+                        android:id="@+id/supermarket_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20px"
+                            android:text="@string/yuanqu_chaoshi"
+                            android:textSize="29px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="14px"
+                            android:text="@string/song_huo_shang_men"
+                            android:textSize="21px" />
+
+                        <ImageView
+                            android:layout_width="139px"
+                            android:layout_height="122px"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="17px"
+                            android:layout_marginTop="15px"
+                            android:src="@mipmap/chaoshi" />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="241px"
+                    android:layout_centerInParent="true"
+                    android:background="#efeff4" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignLeft="@+id/view"
+                        android:layout_weight="1"
+                        android:paddingLeft="15px"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="#585858"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+                        <LinearLayout
+                            android:id="@+id/services_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.zhy.autolayout.AutoLinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignLeft="@+id/view"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="27px"
+                                    android:text="@string/shequ_fuwu"
+                                    android:textSize="29px" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="9px"
+                                    android:singleLine="true"
+                                    android:text="@string/jiazheng_songshui_baojie"
+                                    android:textSize="22px" />
+
+                            </com.zhy.autolayout.AutoLinearLayout>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="86px"
+                                android:layout_weight="1"
+                                android:src="@mipmap/shequfuwu" />
+                        </LinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#efeff4" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignLeft="@+id/view"
+                        android:layout_weight="1"
+                        android:paddingLeft="15px"
+                        app:mrl_rippleAlpha="0.2"
+                        app:mrl_rippleColor="#585858"
+                        app:mrl_rippleDelayClick="false"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true">
+
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/used_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.zhy.autolayout.AutoLinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/view"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/ershou_jiaoyi"
+                                    android:textSize="29px" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginTop="9px"
+                                    android:singleLine="true"
+                                    android:text="@string/xianzhi_jiaoyi"
+                                    android:textSize="22px" />
+                            </com.zhy.autolayout.AutoLinearLayout>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ershou_home" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#efeff4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/view"
+                    android:layout_weight="1"
+                    android:paddingLeft="15px"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="#585858"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/violations_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/view"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/weizhang_chaxun"
+                                android:textSize="29px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="9px"
+                                android:singleLine="true"
+                                android:text="@string/koufen_weizhang"
+                                android:textSize="22px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10px"
+                            android:src="@mipmap/weizhang" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#efeff4" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/view"
+                    android:layout_weight="1"
+                    android:paddingLeft="15px"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="#585858"
+                    app:mrl_rippleDelayClick="false"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/furniture_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/view"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/jiaju_shichang"
+                                android:textSize="29px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="9px"
+                                android:singleLine="true"
+                                android:text="@string/jinpin_jiaju"
+                                android:textSize="22px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="10px"
+                            android:src="@mipmap/jiaju" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="#efeff4" />
+
+            <RelativeLayout
+                android:id="@+id/rl_event"
+                android:layout_width="match_parent"
+                android:layout_height="85px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="26px"
+                    android:text="特惠活动"
+                    android:textSize="29px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="512px"
+                    android:layout_marginTop="29px"
+                    android:text="查看更多"
+                    android:textColor="#B8B8B8"
+                    android:textSize="23px" />
+
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="29px"
+                    android:src="@mipmap/icon_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#efeff4" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16px" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</com.yusong.club.utils.bga.BGARefreshLayout>

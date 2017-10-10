@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260px">
+
+        <!-- api 18 控制 两个背景控制头部栏-->
+        <ImageView
+            android:id="@+id/beijin_2"
+            android:layout_width="match_parent"
+            android:layout_height="216px"
+            android:background="@mipmap/supermarker_beijin" />
+
+        <ImageView
+            android:id="@+id/beijin_1"
+            android:layout_width="match_parent"
+            android:layout_height="260px"
+            android:background="@mipmap/supermarker_beijin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/app_transparency_titile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/logo_image"
+                    android:layout_width="90px"
+                    android:layout_height="90px"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/supermarket_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sm_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="10px"
+                        android:text="社区超市"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+
+
+                    <TextView
+                        android:id="@+id/memo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="10px"
+                        android:text="下单即可免费送货上门"
+                        android:textColor="@color/white"
+                        android:textSize="22px" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_community_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/white"
+            app:tabIndicatorColor="#FF5E28"
+            app:tabSelectedTextColor="#FF5E28" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_community_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px" />
+    </LinearLayout>
+</LinearLayout>

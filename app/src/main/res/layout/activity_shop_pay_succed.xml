@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="375px"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="142px"
+            android:layout_height="121px"
+            android:layout_marginLeft="102px"
+            android:layout_marginTop="72px"
+            android:src="@mipmap/shop_pay_succed" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="262px"
+            android:layout_marginTop="92px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付方式: "
+                android:textColor="@color/font_color_5"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/pay_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额"
+                android:textColor="#FF3904"
+                android:textSize="24px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="262px"
+            android:layout_marginTop="127px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单金额: "
+                android:textColor="@color/font_color_5"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/pay_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="#FF3904"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="248px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/look_order_btn"
+                android:layout_width="210px"
+                android:layout_height="60px"
+                android:background="@drawable/order_item_quxiao_button"
+                android:text="查看订单"
+                android:textColor="@color/font_color_5"
+                android:textSize="24px" />
+
+            <Button
+                android:id="@+id/next_shop_btn"
+                android:layout_width="210px"
+                android:layout_height="60px"
+                android:layout_marginLeft="74px"
+                android:background="@drawable/order_item_quxiao_button"
+                android:text="继续购物"
+                android:textColor="@color/font_color_5"
+                android:textSize="24px" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

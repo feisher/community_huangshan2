@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEFF4">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#EFEFF4"
+        >
+    <include
+        layout="@layout/app_title"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_marginTop="21px"
+        android:layout_marginBottom="1px"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="29px"
+
+            android:textSize="29px"
+            android:textColor="#000000"
+            android:text="姓名"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="37px"
+            android:background="@null"
+            android:maxLength="6"
+            android:textSize="28px"
+
+            android:hint="请输入联系人姓名"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95px"
+        android:layout_marginBottom="1px"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="29px"
+            android:textSize="29px"
+            android:textColor="#000000"
+            android:text="电话"
+            />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="37px"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textSize="28px"
+
+            android:hint="请输入11位手机号"
+            />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95px">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95px"
+            android:layout_marginBottom="1px"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="29px"
+                android:textSize="29px"
+                android:textColor="#000000"
+                android:text="地区"
+                />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40px"
+                android:textSize="28px"
+
+                android:text="请选择省市区"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="29px"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="17px"
+                    android:layout_height="28px"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="34px"
+
+                    android:src="@mipmap/icon_right"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="119px"
+            ></RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#ffffff"
+        >
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="89px"
+            android:layout_marginLeft="28px"
+            android:background="@null"
+            android:textSize="28px"
+            android:hint="请填写详细地址，包括街道门牌号"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dft"
+        android:layout_width="640px"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="33px"
+            android:layout_marginBottom="15px"
+            android:textSize="28px"
+            android:text="设置默认为"
+            />
+        <CheckBox
+            android:id="@+id/cb_dftSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="57px"
+            android:layout_marginBottom="15px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="15px"
+            android:text="寄件地址"
+            />
+        <CheckBox
+            android:id="@+id/cb_dftGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="38px"
+            android:layout_marginBottom="15px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="15px"
+            android:text="收件地址"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="580px"
+        android:layout_height="81px"
+        android:layout_marginLeft="30px"
+        android:layout_marginBottom="38px"
+        android:background="#1DACFF"
+        android:textColor="#ffffff"
+        android:text="确定"
+        />
+    </LinearLayout>
+    <View
+        android:id="@+id/pop_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>

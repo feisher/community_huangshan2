@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- api 18 控制 两个背景控制头部栏-->
+        <ImageView
+            android:id="@+id/beijin_2"
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:background="@mipmap/supermarker_beijin" />
+
+        <ImageView
+            android:id="@+id/beijin_1"
+            android:layout_width="match_parent"
+            android:layout_height="128px"
+            android:background="@mipmap/supermarker_beijin" />
+
+        <include layout="@layout/app_transparency_titile" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="20px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/shanjia" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:text="商家："
+                    android:textColor="@color/font_color_6"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/shanjia_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="89px"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="28px"
+                    tools:text="杭州银湖家园服务中心" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30px"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:text="服务时间："
+                    android:textColor="@color/font_color_6"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/shijian_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="32px"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="28px"
+                    tools:text="20:00-0:00" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30px"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="20px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/user_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="31px"
+                    android:text="地址："
+                    android:textColor="@color/font_color_6"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/location_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="89px"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="28px"
+                    tools:text="七贤桥1号" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30px"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:id="@+id/call_shop_layout"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="20px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/user_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="31px"
+                    android:text="电话："
+                    android:textColor="@color/font_color_6"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/call_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="89px"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="28px"
+                    tools:text="0791-83131" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:gravity="center_vertical"
+                android:paddingLeft="31px"
+                android:text="服务简介"
+                android:textColor="@color/font_color_6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:id="@+id/service_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="32px"
+                tools:text="圣诞节啊垃圾堆里神经分裂时间倒计时林恺俊法拉盛对法拉的弗兰克三等奖阿弗萝蒂解放路 三打两建发牢骚" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

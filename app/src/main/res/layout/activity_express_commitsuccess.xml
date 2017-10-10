@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#EFEFF4">
+
+    <include
+        layout="@layout/app_title"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="440px"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#ffffff"
+        >
+        <ImageView
+            android:layout_width="62px"
+            android:layout_height="62px"
+            android:layout_marginTop="51px"
+            android:src="@mipmap/request_success"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27px"
+            android:textSize="28px"
+            android:textColor="#333333"
+            android:text="您的订单已提交"
+            />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47px"
+            android:textSize="26px"
+            android:textColor="#888888"
+            tools:text="请尽快前往快递柜输入存包码完成存包"
+            />
+
+        <LinearLayout
+            android:layout_width="447px"
+            android:layout_height="108px"
+            android:layout_marginTop="40px"
+            android:gravity="center"
+            android:background="#EFEFF4"
+            >
+
+            <TextView
+                android:id="@+id/tv_authCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="56px"
+                android:textColor="#333333"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

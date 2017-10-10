@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/business_bg">
+    <include layout="@layout/layout_school_title"/>
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="287px"
+        android:scaleType="fitXY"/>
+    <!--   android:src="@mipmap/school_top"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87px"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:src="@mipmap/school_notice"/>
+        <ImageView
+            android:layout_width="2px"
+            android:layout_height="60px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="@color/business_bg"/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="30px"-->
+            <!--android:textColor="@color/font_color_5"-->
+            <!--android:text="红领巾相约中国梦，关注十三五"/>-->
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:mvAnimDuration="1000"
+            app:mvInterval="3000"
+            app:mvTextColor="#555555"
+            app:mvTextSize="14sp"
+            app:mvSingleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27px">
+        <LinearLayout
+            style="@style/linear_school_first"
+            android:id="@+id/linear_intro"
+            android:layout_marginLeft="51px">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/school_one"/>
+            <TextView
+                style="@style/tv_school_first"
+                android:text="学校简介"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/linear_school_first"
+            android:id="@+id/linear_notice"
+            android:layout_marginLeft="34px">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/school_two"/>
+            <TextView
+                style="@style/tv_school_first"
+                android:text="通知公告"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27px">
+        <LinearLayout
+            style="@style/linear_school_first"
+            android:id="@+id/linear_address"
+            android:layout_marginLeft="51px">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/school_three"/>
+            <TextView
+                style="@style/tv_school_first"
+                android:text="校讯录"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/linear_school_first"
+            android:id="@+id/linear_assessor"
+            android:layout_marginLeft="34px">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/school_four"/>
+            <TextView
+                style="@style/tv_school_first"
+                android:text="学校审核"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

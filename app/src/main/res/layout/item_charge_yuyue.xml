@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="227px"
+        android:background="@drawable/selector_list_background">
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="20px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_3"
+            android:text="-- --"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="34px"
+            android:layout_marginLeft="24px"
+            android:layout_marginTop="67px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28px"
+                android:layout_height="34px"
+                android:src="@mipmap/dinwei"/>
+
+            <TextView
+                android:id="@+id/juli_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16px"
+                android:gravity="center_vertical"
+                android:textSize="26px"
+                android:textColor="@color/font_color_4"
+                android:text="22.4km"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="110px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:src="@mipmap/shiyongzhong"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="使用中:"/>
+
+            <TextView
+                android:id="@+id/shiyongzhong_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="个"/>
+
+            <ImageView
+                android:layout_width="35px"
+                android:layout_height="35px"
+                android:layout_marginLeft="31px"
+                android:src="@mipmap/kongxian"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="空闲:"/>
+
+            <TextView
+                android:id="@+id/kongxian_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12px"
+                android:gravity="center_vertical"
+                android:textSize="24px"
+                android:textColor="@color/font_color_4"
+                android:text="个"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/chongdian_image"
+            android:layout_width="181px"
+            android:layout_height="126px"
+            android:layout_marginLeft="437px"
+            android:layout_marginTop="19px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+        <View
+            android:layout_width="640px"
+            android:layout_height="1px"
+            android:layout_above="@+id/down_layout"
+            android:background="@color/background"/>
+
+        <LinearLayout
+            android:id="@+id/down_layout"
+            android:layout_width="640px"
+            android:layout_height="62px"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/here_to_layout"
+                android:layout_width="319px"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/selector_list_background">
+
+                <ImageView
+                    android:layout_width="27px"
+                    android:layout_height="32px"
+                    android:layout_marginLeft="104px"
+                    android:layout_marginTop="14px"
+                    android:src="@mipmap/to_here"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12px"
+                    android:layout_marginTop="19px"
+                    android:textSize="23px"
+                    android:textColor="@color/font_color_5"
+                    android:text="到这去"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/background"/>
+
+            <LinearLayout
+                android:id="@+id/yuyue_layout"
+                android:layout_width="320px"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/selector_list_background">
+
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="30px"
+                    android:layout_marginLeft="99px"
+                    android:layout_marginTop="14px"
+                    android:src="@mipmap/yuyue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12px"
+                    android:layout_marginTop="19px"
+                    android:textSize="23px"
+                    android:textColor="@color/font_color_5"
+                    android:text="预约"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background"/>
+    </RelativeLayout>
+
+</LinearLayout>

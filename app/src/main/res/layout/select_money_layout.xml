@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_money_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="--元充"
+            android:textColor="@color/font_color_5"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/layout_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:gravity="center"
+            android:text="--分钟"
+            android:textColor="@color/font_color_4"
+            android:textSize="20px" />
+
+        <TextView
+            android:id="@+id/layout_quantity_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:gravity="center"
+            android:text="--%电量"
+            android:textColor="@color/font_color_4"
+            android:textSize="20px" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/xuanzhong_image"
+        android:layout_width="31px"
+        android:layout_height="31px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/xuanzhong"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

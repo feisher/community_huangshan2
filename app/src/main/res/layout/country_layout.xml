@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:gravity="center_horizontal"
+              xmlns:su="http://schemas.android.com/apk/res-auto">
+
+    <com.yusong.club.utils.city.ScrollerNumberPicker
+        android:id="@+id/province"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        su:itemNumber="5"
+        su:lineColor="#009BF4"
+        su:normalTextColor="#808080"
+        su:maskHight="25dp"
+        su:noEmpty="true"
+        su:normalTextSize="14sp"
+        su:selecredTextColor="#F000"
+        su:selecredTextSize="20sp"
+        su:unitHight="40dp"/>
+
+    <com.yusong.club.utils.city.ScrollerNumberPicker
+        android:id="@+id/city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        su:itemNumber="5"
+        su:maskHight="25dp"
+        su:noEmpty="true"
+        su:lineColor="#009BF4"
+        su:normalTextColor="#808080"
+        su:selecredTextColor="#F000"
+        su:normalTextSize="14sp"
+
+        su:selecredTextSize="20sp"
+        su:unitHight="40dp"/>
+
+    <com.yusong.club.utils.city.ScrollerNumberPicker
+        android:id="@+id/couny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        su:itemNumber="5"
+        su:maskHight="25dp"
+        su:noEmpty="true"
+        su:normalTextSize="14sp"
+        su:selecredTextSize="20sp"
+        su:lineColor="#009BF4"
+        su:normalTextColor="#808080"
+        su:selecredTextColor="#F000"
+        su:unitHight="40dp"/>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/em_context_menu_item_bg"
+        android:clickable="true"
+        android:onClick="copy"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/copy_message"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/em_context_menu_item_bg"
+        android:clickable="true"
+        android:onClick="delete"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/delete_message"/>
+	 <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/darker_gray"/>
+
+   <TextView
+        android:id="@+id/forward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/em_context_menu_item_bg"
+        android:clickable="true"
+        android:onClick="forward"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="@string/forward"/>
+</LinearLayout>

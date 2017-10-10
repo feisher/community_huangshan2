@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_adaptive_down_api18"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:background="@color/transparency" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="@color/transparency">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:paddingTop="24px">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/back" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/find_commodity_layout"
+            android:layout_width="350px"
+            android:layout_height="55px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_find_super_market_et"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8px"
+                    android:text="搜索"
+                    android:textColor="@color/font_color_9"
+                    android:textSize="20px" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="32px"
+            tools:text="title" />
+
+        <LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="532px"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="38px"
+                android:layout_height="40px"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30px"
+                android:background="@mipmap/add"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20px"
+                android:textColor="#ffffff"
+                android:textSize="30px"
+                tools:text="完成" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

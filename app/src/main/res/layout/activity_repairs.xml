@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/white"-->
+    <!--android:scrollbars="none">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物业电话"
+                    android:textColor="@color/font_color_4"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15px"
+                    android:textColor="#008AE7"
+                    android:textSize="28px"
+                    tools:text="4000 888" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="188px"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/fangwu_layout"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fangwu_image"
+                    android:layout_width="91px"
+                    android:layout_height="91px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28px"
+                    android:src="@mipmap/fangwu_select" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14px"
+                    android:gravity="center"
+                    android:text="@string/fangwuweixiu"
+                    android:textColor="@color/font_color_1"
+                    android:textSize="22px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weixiu_layout"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/weixiu_image"
+                    android:layout_width="91px"
+                    android:layout_height="91px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28px"
+                    android:src="@mipmap/weixiu_select_not" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14px"
+                    android:gravity="center"
+                    android:text="@string/yuanquweixiu"
+                    android:textColor="@color/font_color_1"
+                    android:textSize="22px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/baojie_layout"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/baojie_image"
+                    android:layout_width="91px"
+                    android:layout_height="91px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28px"
+                    android:src="@mipmap/baojie_select_not" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14px"
+                    android:gravity="center"
+                    android:text="@string/yuanqubaojie"
+                    android:textColor="@color/font_color_1"
+                    android:textSize="22px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvlua_layout"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/lvhua_image"
+                    android:layout_width="91px"
+                    android:layout_height="91px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28px"
+                    android:src="@mipmap/lvhua_select_not" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14px"
+                    android:gravity="center"
+                    android:text="@string/yuanqulvhua"
+                    android:textColor="@color/font_color_1"
+                    android:textSize="22px" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="22px"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="28px"
+                android:layout_height="28px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="36px"
+                android:src="@mipmap/user_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23px"
+                android:text="@string/yezhu"
+                android:textColor="@color/font_color_3"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/yezhu_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="46px"
+                android:textSize="28px"
+                tools:text="李峰" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30px"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="19px"
+                android:layout_height="28px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="41px"
+                android:src="@mipmap/user_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23px"
+                android:text="@string/shouji_hao"
+                android:textColor="@color/font_color_3"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/phone_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="46px"
+                android:textSize="28px"
+                tools:text="18170582955" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30px"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="28px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="41px"
+                android:src="@mipmap/user_location" />
+
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23px"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/font_color_3"
+                android:textSize="28px"
+                tools:text="中国浙江省杭州市日本... 嘎嘎" />
+
+            <ImageView
+                android:layout_width="17px"
+                android:layout_height="28px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/icon_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="@color/background" />
+
+        <EditText
+            android:id="@+id/memo_et"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="#fff"
+            android:gravity="top"
+            android:hint="您在这里留言，都是在引导我们物业改善服务"
+            android:paddingLeft="28px"
+            android:paddingRight="28px"
+            android:paddingTop="35px"
+            android:textSize="28px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_select_img"
+                android:layout_width="131px"
+                android:layout_height="131px"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/take_photo" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingLeft="15px"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250px"
+            android:background="@color/background">
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="match_parent"
+                android:layout_height="81px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="35px"
+                android:background="@drawable/select_notice"
+                android:text="填好了"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

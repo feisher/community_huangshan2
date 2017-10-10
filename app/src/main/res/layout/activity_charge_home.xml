@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/charge_home_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="640px"
+                android:layout_height="252px"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/charge_gridview"
+                    android:layout_width="640px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="55px"
+                    android:layout_marginTop="54px"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_home"
+                android:layout_width="640px"
+                android:layout_height="574px" />
+
+
+            <RelativeLayout
+                android:layout_width="640px"
+                android:layout_height="252px">
+
+                <LinearLayout
+                    android:id="@+id/help_layout"
+                    android:layout_width="46px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="44px"
+                    android:layout_marginLeft="104px"
+                    android:layout_marginRight="490px"
+                    android:layout_marginTop="56px"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="46px"
+                        android:layout_height="46px"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/help" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13px"
+                        android:gravity="center"
+                        android:text="@string/help_text"
+                        android:textColor="@color/font_color_2"
+                        android:textSize="22px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scan_layout"
+                    android:layout_width="90px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40px"
+                    android:layout_marginLeft="272px"
+                    android:layout_marginRight="280px"
+                    android:layout_marginTop="51px"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="55px"
+                        android:layout_height="55px"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/charge_scan" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12px"
+                        android:gravity="center"
+                        android:text="@string/scan_qr_charging_text"
+                        android:textColor="@color/font_color_2"
+                        android:textSize="22px" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/my_order_layout"
+                    android:layout_width="91px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="47px"
+                    android:layout_marginLeft="466px"
+                    android:layout_marginRight="82px"
+                    android:layout_marginTop="57px"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="42px"
+                        android:layout_height="44px"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/my_order" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11px"
+                        android:gravity="center"
+                        android:text="@string/my_order_text"
+                        android:textColor="@color/font_color_2"
+                        android:textSize="22px" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+</LinearLayout>

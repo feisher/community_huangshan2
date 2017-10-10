@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photo_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.yusong.club.ui.school.teacher.activity.PhotoDetailActivity">
+
+    <include layout="@layout/layout_school_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yusong.club.utils.bga.BGARefreshLayout
+                android:id="@+id/mBGA_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="288px">
+
+                        <ImageView
+                            android:id="@+id/iv_tu"
+                            android:layout_width="match_parent"
+                            android:layout_height="288px"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_title_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="248px"
+                            android:layout_marginRight="246px"
+                            android:layout_marginTop="78px"
+                            android:text="6.1儿童节"
+                            android:textColor="@color/white"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="160px"
+                            android:layout_marginRight="158px"
+                            android:layout_marginTop="160px"
+                            android:lineSpacingExtra="6px"
+                            android:text="一年一度的6.1儿童节到了,瞧瞧小伙伴们多么漂亮!!"
+                            android:textColor="@color/white"
+                            android:textSize="26px" />
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/btn_upload"
+                        android:layout_width="581px"
+                        android:layout_height="81px"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="26px"
+                        android:background="@drawable/select_blue"
+                        android:gravity="center"
+                        android:text="上传照片"
+                        android:textColor="@color/white"
+                        android:textSize="34px" />
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="38px"
+                        android:text="2016年6月1日"
+                        android:textColor="@color/font_color_2"
+                        android:textSize="26px" />
+
+                    <com.yusong.club.ui.school.teacher.view.MyGridView
+                        android:id="@+id/rv_List"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24px"
+                        android:horizontalSpacing="12px"
+                        android:numColumns="4"
+                        android:verticalSpacing="8px" />
+                </LinearLayout>
+            </com.yusong.club.utils.bga.BGARefreshLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_notice_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yusong.club.ui.school.school.activity.NoticeDetailActivity">
+    <include layout="@layout/app_title"/>
+    <TextView
+        android:id="@+id/tv_notice_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:layout_marginRight="30px"
+        android:textSize="34px"
+        android:textColor="#333333"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="4月27日（周一）下午放假通知"/>
+    <TextView
+        android:id="@+id/tv_notice_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="30px"
+        android:textSize="24px"
+        android:textColor="#999999"
+        tools:text="发布时间：2016-12-21 18:36"/>
+    <TextView
+        android:id="@+id/tv_notice_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:textSize="28px"
+        android:textColor="#333333"
+        tools:text="由于接到供电局通知，4月27日（周一）下午1:00 — 3:00 将停电检修，因此学校决定放假半天。 请各位老师和同学"/>
+
+</LinearLayout>

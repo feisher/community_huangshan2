@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layout_week_0"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周日"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_0"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_1"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周一"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_1"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_2"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周二"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_2"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_3"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周三"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_3"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_4"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周四"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_4"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_5"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周五"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_5"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_week_6"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="1px"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="每周六"
+                    android:textColor="@color/black"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/week_6"
+                    android:layout_width="33px"
+                    android:layout_height="24px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="37px"
+                    android:src="@mipmap/select_confirm"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

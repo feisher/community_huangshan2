@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="578px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/select_notice_blackground"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28px"
+                android:paddingLeft="29px"
+                android:textColor="@color/font_color_6"
+                android:textSize="34px"
+                tools:text="标题标题标题标题标题" />
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22px"
+                android:paddingLeft="29px"
+                android:textColor="#888888"
+                android:textSize="26px"
+                tools:text="4月18日" />
+
+            <!--  <com.zly.widget.CollapsedTextView
+                  android:id="@+id/content_tv"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginTop="10px"
+                  android:background="@android:color/white"
+                  android:padding="30px"
+                  android:textColor="#888888"
+                  android:textSize="28px"
+                  app:collapsedLines="3"
+                  app:collapsedText="收起全文"
+                  app:expandedText="展开全文"
+                  app:tipsClickable="true"
+                  app:tipsColor="@color/blue_title"
+                  app:tipsGravity="bottom"
+                  app:tipsUnderline="true" />-->
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24px"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:padding="30px"
+                android:textColor="#888888"
+                android:textSize="28px"
+                tools:text="哦挪动双方均啥的介绍京东方渐叟地方将丰盛的减肥时代峰峻搜的金佛山的房间哦度是奇偶房间似懂非懂将" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25px"
+                android:layout_marginTop="10px"
+                android:text="阅读全文》"
+                android:textSize="30px" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/business_bg"
+    tools:context=".ui.school.school.activity.SchoolActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"/>
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#F8F7F7"
+        >
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_home"
+            android:drawableTop="@drawable/select_home"
+            android:paddingTop="23px"
+            android:textSize="@dimen/tab_textSize"
+            android:textColor="@drawable/select_text_color"
+            android:text="首页"
+            />
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_msg"
+            android:drawableTop="@drawable/select_msg"
+            android:paddingTop="23px"
+            android:textSize="@dimen/tab_textSize"
+            android:textColor="@drawable/select_text_color"
+            android:text="消息"
+            />
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_class"
+            android:drawableTop="@drawable/select_msg"
+            android:textSize="@dimen/tab_textSize"
+            android:paddingTop="23px"
+            android:textColor="@drawable/select_text_color"
+            android:text="校讯通"
+            />
+
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_me"
+            android:drawableTop="@drawable/select_me"
+            android:paddingTop="23px"
+            android:textSize="@dimen/tab_textSize"
+            android:textColor="@drawable/select_text_color"
+            android:text="我的"
+            />
+    </RadioGroup>
+
+</LinearLayout>

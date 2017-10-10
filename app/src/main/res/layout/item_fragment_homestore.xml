@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.balysv.materialripple.MaterialRippleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:mrl_rippleAlpha="0.2"
+    app:mrl_rippleColor="#585858"
+    app:mrl_rippleDelayClick="false"
+    app:mrl_rippleHover="true"
+    app:mrl_rippleOverlay="true">
+
+
+    <LinearLayout
+        android:id="@+id/ll_commodity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/selector"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_commodity"
+            android:layout_width="288px"
+            android:layout_height="216px"
+            tools:background="@mipmap/empty_photo"
+            />
+
+        <TextView
+            android:id="@+id/tv_commodityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="15px"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textSize="28px"
+            tools:text="我是商品，我是商品，我是商品"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="29px"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="¥"
+                android:textColor="#FF0000"
+                android:textSize="26px"
+                />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="29px"
+                tools:text="998"
+                />
+
+            <TextView
+                android:id="@+id/tv_yj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="原价 ¥"
+
+                android:textColor="#AFAFAF"
+                android:textSize="23px"
+                />
+
+            <TextView
+                android:id="@+id/tv_yjj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#AFAFAF"
+                android:textSize="23px"
+                tools:text="1198"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title></title>
+	</head>
+	<style>
+		*{ margin: 0; padding: 0;}
+		ul,li{ list-style: none;}
+		.schedule{ position: relative; }
+		.schedule img{ width: 100%; }
+		.schedule .content{ position: absolute; top: 2.687rem; left: 9.375rem;}
+		.schedule ul{ display: -webkit-box; display: -webkit-flex; display: flex; flex-flow: wrap; }
+		.schedule ul li{ width: 1.87rem; height: 0.8rem; line-height: 0.8rem; font-size: 0.5rem; text-align: center; }
+	</style>
+	<body>
+		<div class="schedule">
+			<img src="schedule_bg.jpg" >
+			<div class="content">
+				<ul>
+					<li>数学</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>数学</li>
+				</ul>
+				<ul>
+					<li>数学</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>数学</li>
+				</ul>
+				<ul>
+					<li>数学</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>数学</li>
+				</ul>
+				<ul>
+					<li>数学</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>数学</li>
+				</ul>
+				<ul>
+					<li>数学</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>语文</li>
+					<li>数学</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+(function (_D){
+	var _self = {};
+	_self.Html = _D.getElementsByTagName("html")[0];
+	_self.widthProportion = function(){var p = (_D.body&&_D.body.clientWidth||_self.Html.offsetWidth)*0.16/320;return p>1?1:p;};
+	_self.changePage = function(){_self.Html.setAttribute("style","font-size:"+_self.widthProportion()*100+"px !important");}
+	_self.changePage();
+	setInterval(_self.changePage,100);
+})(document);
+</script>

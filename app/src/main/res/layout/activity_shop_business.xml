@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_business_title" />
+
+    <include layout="@layout/not_network_layout" />
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/shop_fragment_refrsh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="341px" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/qianggou_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/youhui_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/tuijian_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="61px"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="60px"
+                        android:layout_height="1px"
+                        android:background="#E94414" />
+
+                    <ImageView
+                        android:id="@+id/tuijian_image"
+                        android:layout_width="34px"
+                        android:layout_height="34px"
+                        android:layout_marginLeft="15px"
+                        android:layout_marginRight="8px"
+                        android:src="@mipmap/business_like" />
+
+                    <TextView
+                        android:id="@+id/tuijian_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15px"
+                        android:text="更多推荐"
+                        android:textColor="#E94414"
+                        android:textSize="24px" />
+
+                    <ImageView
+                        android:layout_width="60px"
+                        android:layout_height="1px"
+                        android:background="#E94414" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/tuijian_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <!--辅助控件 占位解决上拉加载问题-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </ScrollView>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+</LinearLayout>

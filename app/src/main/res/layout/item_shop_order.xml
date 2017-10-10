@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px">
+
+        <TextView
+            android:id="@+id/dian_pu_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="88px"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:textColor="@color/black"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/order_stutas_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="88px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="未付款"
+            android:textColor="#FF3904"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="194px"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/commodity_image"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/commodity_details_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="201px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px" />
+
+        <TextView
+            android:id="@+id/commodity_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="201px"
+            android:layout_marginTop="137px"
+            android:textColor="@color/font_color_3"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/commodity_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="585px"
+            android:layout_marginTop="140px"
+            android:text="x1"
+            android:textColor="@color/font_color_4"
+            android:textSize="24px" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:background="#EEEEEE" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="88px"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/quxiao_order_btton"-->
+    <!--android:layout_width="161px"-->
+    <!--android:layout_height="57px"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="27px"-->
+    <!--android:background="@drawable/order_item_quxiao_button"-->
+    <!--android:text="取消订单"-->
+    <!--android:textColor="@color/font_color_5"-->
+    <!--android:textSize="24px" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/orderfukuan_button"-->
+    <!--android:layout_width="161px"-->
+    <!--android:layout_height="57px"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="27px"-->
+    <!--android:background="@drawable/order_item_lijipay_button"-->
+    <!--android:text="去付款"-->
+    <!--android:textColor="@color/font_color_5"-->
+    <!--android:textSize="24px" />-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

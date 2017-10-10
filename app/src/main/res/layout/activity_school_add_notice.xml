@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/business_bg"
+    android:orientation="vertical"
+    tools:context=".ui.school.school.activity.AddNoticeActivity">
+
+    <include layout="@layout/layout_school_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="21px"
+                android:background="@color/white"
+                android:hint="请输入公告/通知标题"
+                android:paddingLeft="30px"
+                android:textColorHint="#888888" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="242px"
+                android:layout_marginTop="21px"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="请输入公告/通知内容"
+                android:padding="30px"
+                android:textColorHint="#888888" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="21px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公告类型"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="学校公告"
+                    android:textColor="#999999"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13px"
+                    android:src="@mipmap/school_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88px"
+                android:layout_marginTop="2px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布范围"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_limits"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="老师可见"
+                    android:textColor="#999999"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13px"
+                    android:src="@mipmap/school_right" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="175px"-->
+            <!--android:layout_marginTop="20px"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:background="@color/white">-->
+            <!--<ImageView-->
+            <!--android:id="@+id/im_picture"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30px"-->
+            <!--android:src="@mipmap/add_image"/>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36px"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_notice"
+                    android:layout_width="581px"
+                    android:layout_height="81px"
+                    android:background="@drawable/select_notice"
+                    android:text="发布"
+                    android:textColor="@color/white"
+                    android:textSize="34px" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/mPop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+</LinearLayout>

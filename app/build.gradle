@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+def APKName = "宇松智慧城市服务"
+def APPLICATIONID = "com.yusong.club"
+android {
+    def gConfiguration = rootProject.extensions.getByName("ext")
+    signingConfigs {
+        config {
+            keyAlias 'yusong'
+            keyPassword '123456'
+            storeFile file('key1.jks')
+            storePassword '123456'
+        }
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    compileSdkVersion gConfiguration.androidCompileSdkVersion
+    buildToolsVersion gConfiguration.androidBuildToolsVersion
+    defaultConfig {
+        applicationId APPLICATIONID
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 2
+        versionName "0.0.2"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
+        resConfigs "zh"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters  'armeabi','arm64-v8a', 'armeabi-v7a'//, 'x86', , 'x86_64',
+        }
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "int", "Server_Url_Index", "1";
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [
+                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
+                    HUANXIN : "1156170619178872#club"
+            ];
+            signingConfig signingConfigs.config
+        }
+        debug {
+            buildConfigField "int", "Server_Url_Index", "0";
+            manifestPlaceholders = [
+                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
+                    HUANXIN : "1156170619178872#club"
+            ];
+            signingConfig signingConfigs.config
+        }
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFile = new File(output.outputFile.parent,
+                        APKName + "-v" + defaultConfig.versionName + ".apk");
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+apply plugin: 'replugin-plugin-gradle'//插件配置
+dependencies {
+    compile 'com.qihoo360.replugin:replugin-plugin-lib:2.2.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+//    compile files('libs/bolts-tasks-1.4.0.jar')
+    compile files('libs/alipaySDK-20150818.jar')
+    compile files('libs/MobCommons-2017.0914.1125.jar')
+    compile files('libs/MobTools-2017.0914.1125.jar')
+    compile files('libs/ShareSDK-Core-3.1.0.jar')
+    compile files('libs/ShareSDK-QQ-3.1.0.jar')
+    compile files('libs/ShareSDK-ShortMessage-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-3.1.0.jar')
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile androidDependencies.recyclerView
+    compile androidDependencies.support_v4
+    compile viewDependencies.glide
+    compile androidDependencies.appcompat_v7
+    compile project(':easeui')
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
+    compile 'com.wx.wheelview:wheelview:1.3.3'
+    compile 'com.squareup.retrofit2:retrofit:+'
+    compile 'com.squareup.retrofit2:converter-gson:+'
+    compile 'com.squareup.retrofit2:adapter-rxjava:+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'io.reactivex:rxjava:+'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit:adapter-rxjava:+'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zbar:1.1.7@aar'
+    compile 'com.yanzhenjie:permission:1.0.3'
+    compile 'com.youth.banner:banner:1.4.5'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'com.yuyh.imgsel:library:1.3.8'
+    compile 'com.sunfusheng:marqueeview:1.2.0'
+    compile project(':gsyVideoPlayer')
+    compile 'id.zelory:compressor:1.0.4'
+    compile 'com.balysv:material-ripple:1.0.2'
+    compile project(':videolibrary')
+    compile project(':librarycalendar')
+    compile project(':alarmmanagerclock')
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.0.2'
+    compile 'com.wanjian:cockroach:0.0.5'
+    compile 'zlc.season:rxdownload:1.2.2'
+    compile 'com.github.codbking:PickTime:v1.0.1'
+    compile 'com.leaking.slideswitch:slideswitch:1.0.0'
+    compile 'com.google.zxing:core:3.2.1'
+    //文本折叠
+    compile 'com.zly.widget:collapsed-textview:1.0.4'
+    compile(name: 'chargersdk-release', ext: 'aar')
+
+}

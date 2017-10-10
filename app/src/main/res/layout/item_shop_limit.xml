@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="265px">
+
+        <ImageView
+            android:id="@+id/commundity_image"
+            android:layout_width="220px"
+            android:layout_height="220px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_newPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="272px"
+            android:layout_marginTop="26px"
+            android:text="0000"
+            android:textColor="@color/red_normal"
+            android:textSize="34px" />
+
+        <TextView
+            android:id="@+id/tv_oldPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="33px"
+            android:layout_toRightOf="@+id/tv_newPrice"
+            android:text="0000"
+            android:textColor="@color/font_color_9"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="500px"
+            android:layout_marginRight="22px"
+            android:layout_marginTop="33px"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/red_normal"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="82px"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="267px"
+            android:layout_marginRight="22px"
+            android:layout_marginTop="84px"
+            android:text=""
+            android:textColor="@color/font_color_3"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="269px"
+            android:layout_marginRight="170px"
+            android:layout_marginTop="190px"
+            android:singleLine="true"
+            android:textColor="@color/font_color_9"
+            android:textSize="24px" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="182px"
+            android:layout_height="16px"
+            android:layout_marginLeft="268px"
+            android:layout_marginTop="224px"
+            android:max="100"
+            android:progressDrawable="@drawable/shop_progress" />
+
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="140px"
+            android:layout_height="55px"
+            android:layout_marginLeft="478px"
+            android:layout_marginRight="22px"
+            android:layout_marginTop="186px"
+            android:background="@drawable/select_red"
+            android:text="立即抢购"
+            android:textColor="@color/white"
+            android:textSize="26px" />
+
+    </RelativeLayout>
+
+</LinearLayout>

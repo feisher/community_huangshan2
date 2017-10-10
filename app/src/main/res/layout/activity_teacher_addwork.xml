@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/business_bg"
+    tools:context="com.yusong.club.ui.school.teacher.activity.AddworkActivity">
+
+    <include layout="@layout/layout_teacher_title"/>
+
+    <LinearLayout
+        android:id="@+id/linear_subject"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="22px"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="31px"
+            android:textSize="30px"
+            android:textColor="@color/font_color_6"
+            android:text="当前科目"/>
+        <TextView
+            android:id="@+id/tv_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:textColor="@color/font_color_9"
+            android:text=""/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13px"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/icon_right"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/after_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="22px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:text="选择日期"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:textColor="#999999"
+            android:textSize="30px" />
+
+        <ImageView
+            android:layout_width="17px"
+            android:layout_height="28px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="29px"
+            android:src="@mipmap/icon_right" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="309px"
+        android:layout_marginTop="21px"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="top"
+            android:padding="30px"
+            android:textColorHint="@color/font_color_4"
+            android:hint="请输入当前科目作业内容"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_issue"
+        android:layout_width="581px"
+        android:layout_height="81px"
+        android:layout_gravity="center"
+        android:layout_marginTop="24px"
+        android:background="@drawable/sele_buy"
+        android:textSize="34px"
+        android:textColor="@color/white"
+        android:text="发布"/>
+</LinearLayout>

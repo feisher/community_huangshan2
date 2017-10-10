@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#EFEFF4"
+    >
+
+    <include
+        layout="@layout/app_title"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#EFEFF4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="185px"
+                android:layout_marginTop="21px"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/rl_sender"
+                    android:layout_width="0dp"
+                    android:layout_height="185px"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:layout_width="52px"
+                        android:layout_height="53px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="73px"
+                        android:src="@mipmap/email"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_senderInfo"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="101px"
+                        android:layout_marginTop="80px"
+                        android:textSize="26px"
+                        android:textColor="#888888"
+                        android:text="请输入寄件人信息"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sender"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="101px"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_senderName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20px"
+                                android:textSize="24px"
+                                android:textColor="#888888"
+                                tools:text="剑侠客"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_senderPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15px"
+                                android:layout_marginTop="20px"
+                                android:textSize="24px"
+                                android:textColor="#888888"
+                                tools:text="321213123"
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_senderAddress"
+                            android:layout_width="364px"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textSize="26px"
+                            android:textColor="#000000"
+                            tools:text="dwqdqwdwqddqwdwqefq"
+                            />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:layout_marginLeft="493px"
+                        android:layout_marginTop="43px"
+                        android:src="@mipmap/line"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_senderAddress"
+                    android:layout_width="145px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30px"
+                        android:textSize="28px"
+                        android:textColor="#1DACFF"
+                        android:text="地址簿"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="185px"
+                android:layout_marginTop="1px"
+                android:background="#ffffff">
+
+                <RelativeLayout
+                    android:id="@+id/rl_get"
+                    android:layout_width="0dp"
+                    android:layout_height="185px"
+                    android:layout_weight="1"
+                    >
+
+                    <ImageView
+                        android:layout_width="52px"
+                        android:layout_height="53px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="73px"
+                        android:src="@mipmap/getemail"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="101px"
+                        android:layout_marginTop="80px"
+                        android:textSize="26px"
+                        android:textColor="#888888"
+                        android:text="请输入收件人信息"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_get"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="101px"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20px"
+                                android:textSize="24px"
+                                android:textColor="#888888"
+                                tools:text="剑侠客"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15px"
+                                android:layout_marginTop="20px"
+                                android:textSize="24px"
+                                android:textColor="#888888"
+                                tools:text="321213123"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="364px"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textSize="26px"
+                            android:textColor="#000000"
+                            tools:text="dwqdqwdwqddqwdwqefwefewfewfewfewfewfewfdwq"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="493px"
+                        android:layout_marginTop="43px"
+                        android:src="@mipmap/line"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_address"
+                    android:layout_width="145px"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30px"
+                        android:textSize="28px"
+                        android:textColor="#1DACFF"
+                        android:text="地址簿"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_marginTop="21px"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="29px"
+                    android:textSize="28px"
+                    android:textColor="#000000"
+                    android:text="物品类型"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:orientation="vertical"
+                    android:onClick="typeDialog"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="28px"
+                        android:textColor="#999999"
+                        tools:text="衣服"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="29px"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="17px"
+                        android:layout_height="28px"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="34px"
+
+                        android:src="@mipmap/icon_right"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_number"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="29px"
+                    android:textSize="28px"
+                    android:textColor="#000000"
+                    android:text="物品件数"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:orientation="vertical"
+                    android:onClick="numberDialog"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="28px"
+                        android:textColor="#999999"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="29px"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="17px"
+                        android:layout_height="28px"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="34px"
+
+                        android:src="@mipmap/icon_right"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="29px"
+                    android:textSize="28px"
+                    android:textColor="#000000"
+                    android:text="快递公司"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:orientation="vertical"
+                    android:onClick="corporationDialog"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_corporation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="28px"
+                        android:textColor="#999999"
+                        tools:text="顺丰快递"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="29px"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="17px"
+                        android:layout_height="28px"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="34px"
+
+                        android:src="@mipmap/icon_right"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_type"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="29px"
+                    android:textSize="28px"
+                    android:textColor="#000000"
+                    android:text="选择箱体"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="16"
+                    android:orientation="vertical"
+                    android:onClick="boxDialog"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="28px"
+                        android:textColor="#999999"
+                        tools:text="大箱"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="29px"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="17px"
+                        android:layout_height="28px"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="34px"
+
+                        android:src="@mipmap/icon_right"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68px"
+                    android:layout_marginTop="46px"
+                    android:layout_marginBottom="1px"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29px"
+                        android:textSize="28px"
+                        android:text="预计寄件运费："
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28px"
+                        android:textColor="@color/red_normal"
+                        tools:text="3元"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140px"
+                    android:gravity="center_vertical"
+                    android:background="#ffffff">
+
+                    <Button
+                        android:id="@+id/btn_commit"
+                        android:layout_width="580px"
+                        android:layout_height="81px"
+                        android:layout_marginLeft="30px"
+                        android:background="#1dacff"
+                        android:textColor="#ffffff"
+                        android:text="提交"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/pop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</LinearLayout>

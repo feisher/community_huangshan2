@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="700px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:gravity="center_vertical"
+            android:text="提醒"
+            android:textSize="26px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="134px"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/after_school_notifiy" />
+
+            <TextView
+                android:id="@+id/after_school_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="137px"
+                android:layout_marginTop="33px"
+                android:textColor="@color/font_color_3"
+                android:textSize="38px" />
+
+            <TextView
+                android:id="@+id/after_school_week_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="137px"
+                android:layout_marginTop="82px"
+                android:textColor="@color/font_color_3"
+                android:textSize="24px" />
+
+            <com.yusong.club.ui.school.teacher.view.SlipButton
+                android:id="@+id/slip_button"
+                android:layout_width="82px"
+                android:layout_height="62px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="22px" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ds="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_parent_leave"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yusong.club.ui.school.teacher.activity.CreateParentLeaveActivity">
+
+    <include layout="@layout/layout_parent_leave" />
+
+    <LinearLayout
+        android:id="@+id/lin_stu_name"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_margin="5px"
+        android:background="@drawable/shape_create_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="30px"
+            android:gravity="left|center"
+            android:text="学生姓名"
+            android:textSize="26px" />
+
+        <EditText
+            android:id="@+id/et_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="请输入学生姓名"
+            android:background="@null"
+            android:paddingLeft="36px"
+            android:textSize="24px"
+            android:gravity="center"
+            android:textColor="@color/font_color_7" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_margin="5px"
+        android:background="@drawable/shape_create_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="开始时间"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/font_color_7" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:src="@mipmap/icon_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_margin="5px"
+        android:background="@drawable/shape_create_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="30px"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="结束时间"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/font_color_7" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:src="@mipmap/icon_right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_margin="5px"
+        android:background="@drawable/shape_create_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="118px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="30px"
+            android:gravity="left|center"
+            android:text="请假天数"
+            android:textSize="26px" />
+
+        <EditText
+            android:id="@+id/et_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingLeft="36px"
+            android:textColor="@color/font_color_7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="15px"
+            android:gravity="center"
+            android:text="天" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="118px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:gravity="left|center"
+        android:text="请假原因"
+        android:textSize="26px" />
+
+
+    <com.yusong.club.ui.school.teacher.view.flowlayout.TagFlowLayout
+        android:id="@+id/id_flowlayout"
+        android:layout_marginTop="20px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10px"
+        ds:max_select="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5px"
+        android:background="@drawable/shape_create_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="给老师留言"
+            android:maxLength="500"
+            android:minLines="8"
+            android:padding="15px"
+            android:textColor="@color/font_color_9"
+            android:textSize="26px" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

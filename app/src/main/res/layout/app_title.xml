@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_adaptive_down_api18"
+        android:layout_width="match_parent"
+        android:layout_height="44px"
+        android:background="@color/blue_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84px"
+        android:background="@color/blue_title">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:paddingTop="24px">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="32px"
+            tools:text="title" />
+
+
+        <RelativeLayout
+            android:id="@+id/find_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/find_et"
+                android:layout_width="436px"
+                android:layout_height="56px"
+                android:background="@drawable/layout_circular_bead"
+                android:hint="@string/edittxt_hint_find"
+                android:paddingLeft="54px"
+                android:singleLine="true"
+                android:textSize="32px" />
+
+            <ImageView
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8px"
+                android:src="@mipmap/find_small" />
+        </RelativeLayout>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="401px"
+            android:layout_height="56px"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/radiogroup_layout"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/left_radio"
+                style="@style/RadioButtonLeft"
+                android:text="未付款" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <RadioButton
+                android:id="@+id/center_radio"
+                style="@style/RadioButtonCenter"
+                android:text="已付款" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <RadioButton
+                android:id="@+id/right_radio"
+                style="@style/RadioButtonRight"
+                android:text="已完成" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radio_group_address"
+            android:layout_width="300px"
+            android:layout_height="56px"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/radiogroup_layout"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/left_radio_address"
+                style="@style/RadioButtonLeft"
+                android:text="寄件" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <RadioButton
+                android:id="@+id/right_radio_address"
+                style="@style/RadioButtonRight"
+                android:text="收件" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="532px"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="38px"
+                android:layout_height="40px"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30px"
+                android:background="@mipmap/add"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20px"
+                android:textColor="#ffffff"
+                android:textSize="30px"
+                tools:text="完成" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

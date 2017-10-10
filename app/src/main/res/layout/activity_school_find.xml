@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#d1d1d1">
+
+        <EditText
+            android:id="@+id/school_find_et"
+            android:layout_width="570px"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/search"
+            android:hint="请输入学校关键字"
+            android:padding="13px"
+            android:background="@drawable/layout_circular_bead"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="搜索结果如下："
+        android:textSize="24px"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/find_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

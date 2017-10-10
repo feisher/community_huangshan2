@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="0px" android:layout_height="0px"
+        android:focusable="true" android:focusableInTouchMode="true">
+        <requestFocus />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/color_white_round_bg"
+        android:hint="请输入城市名称或拼音"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="当前位置"/>
+
+    <Button
+        android:id="@+id/btn_location_city"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10px"
+        android:background="@drawable/color_white_round_bg"
+        android:text="杭州市"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="热门城市"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_marginLeft="10px"-->
+        <!--android:text="北京市"-->
+        <!--android:background="@drawable/color_white_round_bg"/>-->
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="640px"
+        android:layout_height="391px"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px">
+
+            <TextView
+                android:id="@+id/order_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="29px"
+                android:textSize="28px"
+                android:textColor="@color/font_color_6"
+                android:text="订单号:"/>
+
+            <TextView
+                android:id="@+id/order_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="32px"
+                android:textSize="28px"
+                android:textColor="@color/font_color_orange"
+                android:text="未付款"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="640px"
+            android:layout_height="1px"
+            android:background="@color/background"/>
+
+        <LinearLayout
+            android:layout_width="640px"
+            android:layout_height="203px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="640px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="订单详情:"/>
+
+                <TextView
+                    android:id="@+id/charge_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_3"
+                    android:text="订单时间:"/>
+
+                <TextView
+                    android:id="@+id/order_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="640px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="预约地址:"/>
+
+                <TextView
+                    android:id="@+id/yuyue_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="640px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text="预约桩点:"/>
+
+                <TextView
+                    android:id="@+id/yuyue_zhuangdian_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:textSize="24px"
+                    android:textColor="@color/font_color_5"
+                    android:text=""/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="640px"
+            android:layout_height="1px"
+            android:background="@color/background"/>
+
+        <RelativeLayout
+            android:layout_width="640px"
+            android:layout_height="98px">
+
+
+            <Button
+                android:id="@+id/cancel_order_btn"
+                android:layout_width="162px"
+                android:layout_height="57px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="261px"
+                android:background="@drawable/order_item_quxiao_button"
+                android:textSize="24px"
+                android:textColor="@color/font_color_5"
+                android:text="取消订单"/>
+
+            <Button
+                android:id="@+id/liji_fukuang_btn"
+                android:layout_width="162px"
+                android:layout_height="57px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="448px"
+                android:background="@drawable/order_item_lijipay_button"
+                android:textSize="24px"
+                android:textColor="@color/title_color"
+                android:text="立即付款"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

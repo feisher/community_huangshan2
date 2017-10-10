@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/throught_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_title"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+
+    <LinearLayout
+        android:id="@+id/card_layout"
+        android:layout_width="539px"
+        android:layout_height="711px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32px"
+        android:background="@mipmap/through_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/through_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="41px"
+            android:layout_marginTop="44px"
+            android:textColor="@color/font_color_5"
+            android:textSize="34px"
+            tools:text="尊敬的  张峰先生" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="41px"
+            android:layout_marginTop="53px"
+            android:text="通行码："
+            android:textColor="@color/font_color_5"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/through_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="41px"
+            android:textColor="@color/font_color_5"
+            android:textSize="30px"
+            tools:text="21110-20-00" />
+
+        <ImageView
+            android:id="@+id/erweima_image"
+            android:layout_width="303px"
+            android:layout_height="303px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15px" />
+
+
+        <TextView
+            android:id="@+id/valid_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="65px"
+            android:textColor="@color/font_color_5"
+            android:textSize="22px"
+            tools:text="有效期：2017-08-31" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="10px"
+            android:text="进入园区时请出示通行证给门岗"
+            android:textColor="@color/font_color_5"
+            android:textSize="22px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/send_through_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="83px"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/through_send" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27px"
+            android:gravity="center"
+            android:text="@string/send_the_fangke"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+    </LinearLayout>
+
+</LinearLayout>

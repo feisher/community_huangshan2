@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include layout="@layout/app_title" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line_view"
+        android:layout_below="@+id/app_title_layout" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/ershou_tab"
+        android:background="#CCCCCC" />
+
+    <RadioGroup
+        android:id="@+id/ershou_tab"
+        android:layout_width="match_parent"
+        android:layout_height="97px"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#F8F7F7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/ershoushichang_radio"
+            style="@style/sytle_RadioButton"
+            android:background="@drawable/selector"
+            android:drawableTop="@drawable/select_home"
+            android:paddingTop="23px"
+            android:text="二手市场"
+            android:textColor="@drawable/select_text_color"
+            android:textSize="25px" />
+
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:enabled="false"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="10px"
+            android:text="发布"
+            android:textSize="25px" />
+
+        <RadioButton
+            android:id="@+id/ershou_wo_radio"
+            style="@style/sytle_RadioButton"
+            android:background="@drawable/selector"
+            android:drawableTop="@drawable/select_me"
+            android:paddingTop="23px"
+            android:text="我发布的"
+            android:textColor="@drawable/select_text_color"
+            android:textSize="25px" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ershou_fabu_button"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33px"
+        android:layout_marginTop="1002px"
+        android:src="@mipmap/ershou_add" />
+
+</RelativeLayout>

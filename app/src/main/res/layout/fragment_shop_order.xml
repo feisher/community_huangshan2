@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/not_network_layout" />
+
+    <include layout="@layout/not_data_layout" />
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/shop_order_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shop_order_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:visibility="gone" />
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+</LinearLayout>

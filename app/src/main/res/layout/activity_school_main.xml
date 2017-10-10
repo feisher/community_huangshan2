@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.yusong.club.ui.MainActivity">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="640px"-->
+        <!--android:layout_height="128px"-->
+        <!--android:background="@color/green_title"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="288px"-->
+            <!--android:layout_marginTop="67px"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:text="首页"-->
+            <!--android:textSize="33px"/>-->
+    <!--</RelativeLayout>-->
+    <include layout="@layout/app_title"
+        android:id="@+id/app_title_layout"
+        />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"/>
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="97px"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#F8F7F7"
+        >
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_home"
+            android:drawableTop="@drawable/select_home"
+            android:textSize="@dimen/tab_textSize"
+            android:background="@drawable/selector"
+            android:textColor="@drawable/select_text_color"
+            android:text="首页"
+            />
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_msg"
+            android:drawableTop="@drawable/select_msg"
+            android:textSize="@dimen/tab_textSize"
+            android:background="@drawable/selector"
+            android:textColor="@drawable/select_text_color"
+            android:text="消息"
+            />
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_commerce"
+            android:drawableTop="@drawable/select_commerce"
+            android:textSize="@dimen/tab_textSize"
+            android:background="@drawable/selector"
+            android:textColor="@drawable/select_text_color"
+            android:text="商圈"
+            />
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_community"
+            android:drawableTop="@drawable/select_community"
+            android:textSize="@dimen/tab_textSize"
+            android:background="@drawable/selector"
+            android:textColor="@drawable/select_text_color"
+            android:text="社区"
+            />
+
+        <RadioButton
+            style="@style/sytle_RadioButton"
+            android:id="@+id/rb_me"
+            android:drawableTop="@drawable/select_me"
+            android:textSize="@dimen/tab_textSize"
+            android:background="@drawable/selector"
+            android:textColor="@drawable/select_text_color"
+            android:text="我的"
+            />
+    </RadioGroup>
+
+</LinearLayout>

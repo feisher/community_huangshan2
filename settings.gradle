@@ -1,0 +1,1 @@
+include ':app', ':easeui', ':gsyVideoPlayer',':videolibrary',':librarycalendar',':alarmmanagerclock'

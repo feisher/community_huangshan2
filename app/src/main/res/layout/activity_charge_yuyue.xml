@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:baselineAligned="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/app_title"/>
+
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="405px">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="640px"
+            android:layout_height="405px"
+            android:clickable="true"/>
+
+        <LinearLayout
+            android:layout_width="111px"
+            android:layout_height="151px"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="20px"
+            android:orientation="vertical"
+            android:background="@drawable/layout_circular_bead">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="23px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22px"
+                    android:layout_height="26px"
+                    android:src="@mipmap/chongdian_keyong"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center"
+                    android:textSize="18px"
+                    android:textColor="@color/font_color_5"
+                    android:text="空闲"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="15px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22px"
+                    android:layout_height="26px"
+                    android:src="@mipmap/zhan_man"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center"
+                    android:textSize="18px"
+                    android:textColor="@color/font_color_5"
+                    android:text="占满"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21px"
+                android:layout_marginTop="15px"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22px"
+                    android:layout_height="26px"
+                    android:src="@mipmap/guzhang"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center"
+                    android:textSize="18px"
+                    android:textColor="@color/font_color_5"
+                    android:text="故障"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="640px"
+        android:layout_height="52px"
+        android:gravity="center"
+        android:background="@color/white"
+        android:textSize="22px"
+        android:text="@string/wo_fin_jin"/>
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/yuyue_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/yuyue_listview"
+            android:layout_width="640px"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="1px"
+            android:dividerHeight="6px"
+            android:listSelector="@android:color/transparent"/>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+
+</LinearLayout>

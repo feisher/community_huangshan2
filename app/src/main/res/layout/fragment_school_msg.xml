@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/business_bg">
+    <include layout="@layout/layout_school_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85px">
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20px"
+            android:paddingLeft="25px"
+            android:background="@drawable/shape_et"
+            android:drawableLeft="@mipmap/search"
+            android:drawablePadding="20px"
+            android:textColorHint="#afafaf"
+            android:hint="搜索"/>
+    </LinearLayout>
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/swipe_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+        </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+</LinearLayout>

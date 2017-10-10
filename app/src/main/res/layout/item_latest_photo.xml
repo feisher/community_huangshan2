@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingBottom="15px"
+        android:paddingLeft="12px"
+        android:paddingRight="18px"
+        android:paddingTop="15px"
+        android:singleLine="true"
+        android:text="这这次活动举办的非"
+        android:textColor="@color/font_color_4"
+        android:textSize="26px" />
+
+    <com.yusong.club.ui.school.teacher.view.MyGridView
+        android:id="@+id/gv_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12px"
+        android:layout_marginRight="10px"
+        android:horizontalSpacing="12px"
+        android:numColumns="4"
+        android:verticalSpacing="12px" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15px"
+        android:background="@color/business_bg"
+        android:visibility="gone" />
+</LinearLayout>
+
+

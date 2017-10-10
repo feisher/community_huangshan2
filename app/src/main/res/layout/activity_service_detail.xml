@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ds="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/business_bg"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="640px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="125px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/commundity_name_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="74px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="37px"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/font_color_3"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="76px"
+                        android:layout_marginRight="32px"
+                        android:background="@color/business_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_shop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="38px"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@mipmap/business_shop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10px"
+                            android:text="服务"
+                            android:textColor="@color/business_text"
+                            android:textSize="24px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="617px"
+                    android:layout_height="1px"
+                    android:background="@color/business_bg" />
+
+
+                <TextView
+                    style="@style/information_text"
+                    android:layout_marginTop="20px"
+                    android:text="服务简介"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:layout_width="617px"
+                    android:layout_height="1px"
+                    android:background="@color/business_bg" />
+
+                <TextView
+                    android:id="@+id/commodity_jishao_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="12px"
+                    android:paddingLeft="22px"
+                    android:text=""
+                    android:textColor="@color/business_text"
+                    android:textSize="26px" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/shop_picture_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/information_text"
+                    android:layout_marginTop="30px"
+                    android:text="服务评价"
+                    android:textColor="@color/font_color_3"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:layout_width="617px"
+                    android:layout_height="1px"
+                    android:background="@color/business_bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/pinlun_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35px"
+            android:layout_weight="1"
+            android:text="¥ 0.00"
+            android:textColor="@color/red_normal"
+            android:textSize="40px" />
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="226px"
+            android:layout_height="88px"
+            android:background="@drawable/sele_buy"
+            android:text="立即预约"
+            android:textColor="@color/white"
+            android:textSize="30px" />
+    </LinearLayout>
+
+</LinearLayout>

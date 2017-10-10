@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_nearby_commuity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context="com.yusong.club.ui.community.activity.NearbyCommuityActivity">
+    <include layout="@layout/app_title"/>
+    <TextView
+        android:id="@+id/tv_nearby_title"
+        android:layout_width="match_parent"
+        android:layout_height="72px"
+        android:paddingLeft="30px"
+        android:gravity="center_vertical"
+        android:background="#eeeeee"
+        android:textColor="#1DACFF"
+        android:text="附近的小区"/>
+    <com.yusong.club.utils.bga.BGARefreshLayout
+        android:id="@+id/bgar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_nearby_commuitys"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#fff"/>
+    </com.yusong.club.utils.bga.BGARefreshLayout>
+
+</LinearLayout>

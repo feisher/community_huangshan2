@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <View
+            android:id="@+id/pop_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#BBB"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:clickable="true"
+                android:textSize="18sp"
+                android:textColor="#F000"
+                android:text="取消"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#F000"
+                android:text="请选择城市"/>
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:clickable="true"
+                android:textSize="18sp"
+                android:textColor="#F000"
+                android:text="确定"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#BBB"/>
+
+        <com.yusong.club.utils.city.CityPicker
+            android:id="@+id/cp_citypicker"
+            android:layout_width="match_parent"
+            android:layout_height="380px">
+
+        </com.yusong.club.utils.city.CityPicker>
+    </LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

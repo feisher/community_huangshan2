@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yusong.club">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- Map -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取MAC地址 -->
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.yusong.club.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="640" />
+        <meta-data
+            android:name="design_height"
+            android:value="1136" />
+        <!-- 蒲公英升级插件 -->
+        <!--<meta-data-->
+        <!--android:name="PGYER_APPID"-->
+        <!--android:value="bd8ca1a77050d1398517e7dd4c49fc03" />-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="48ae76de3f" />
+        <!-- BaiDuMap 签名文件 key1.jks(见svn) -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDUMAP}" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="${HUANXIN}" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.yusong.club.ui.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.yusong.club.ui.community.activity.InputActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentFullScreenTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.yusong.club.ui.charge.ChargeHomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.ExpressHomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.YuYueActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.YuYueDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.SendMailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.FillInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.AddressActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.MailQueryActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.ChargeMyOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.PaySuccesActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.MoveSosActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.OrderDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.home.activity.LoginActivity"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name="com.yusong.club.ui.express.activity.MeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.home.activity.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.HelpActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.InChargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.StartChargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.CommitSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.MailOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.SaveBagsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.ScanOpenBoxActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.NearbyBoxActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.ScanOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.SearchSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.LogisticsInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.BoxDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.ScanChargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.charge.activity.ScanStartChargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.OpenBoxListActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.CommodityDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.ShopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.ShopOrderActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.OrderDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.DecorationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.used.activity.UsedHomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.used.activity.IssueActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.used.activity.UsedDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.ConfirmOrderActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.ShopPaySuccedActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.SchoolActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.IntroActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.NoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.AddNoticeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.ChooseActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.AssessorActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.AddressActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.TeacherActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.HomeworkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.AddworkActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.DutyTeacherActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.HistoryWorkActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.EducationActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ClassPhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.UploadPhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.UploadVideoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ScheduleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.EvaluateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.EditEvaluateActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.AddressBookActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ClassActionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.parent.activity.ParentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.AddAfterSchoolActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.SelectWeekSchoolActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.RobShopDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.AheadAfterSchoolActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.me.activity.MySettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.me.activity.MyInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.SenderOrderDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.base.BaseWebViewActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.home.activity.FleaActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.community.activity.CreatePostActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.express.activity.GetOrderDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.community.activity.NearbyCommuityActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.community.activity.PostDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.yusong.club.ui.community.activity.HaveCommunityCityActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.im.NotifyDetailsActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.user.activity.CreateRoleActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.user.activity.CreateRoleExplainActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.user.activity.CreateRoleCheckResultActivity"
+            android:launchMode="singleTop" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- alipay sdk end -->
+
+
+        <!-- 聊天页面 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 添加好友 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.AddContactActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <!-- 群组详情 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 群组列表 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 聊天室详情 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ChatRoomDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 新建群组 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.NewGroupActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 退出群组提示框 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ExitGroupDialog"
+            android:screenOrientation="portrait" />
+        <!-- 群组选人 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupPickContactsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.PickAtUserActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 地图 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.NewFriendsMsgActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ForwardMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 自定义的contextmenu -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ContextMenuActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 显示下载大图页面 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 下载文件 -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 黑名单 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.BlacklistActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 公开的群聊列表 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.PublicGroupsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 语音通话 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.VoiceCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 视频通话 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 群聊简单信息 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupSimpleDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 群组黑名单用户列表 -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupBlacklistActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.GroupSearchMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.PublicGroupsSeachActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.EditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- choose video -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.ImageGridActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.RecorderVideoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- upload error log -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.DiagnoseActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- iOS offline push nick -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.OfflinePushNickActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- user profile -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.UserProfileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.SetServersActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.im.ui.OfflinePushSettingsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- android:screenOrientation="portrait"/> -->
+        <activity
+            android:name="com.yusong.club.ui.im.ui.CallOptionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- android:screenOrientation="portrait"/> -->
+
+        <!--&lt;!&ndash; 微信支付&ndash;&gt;-->
+        <!--<activity-->
+            <!--android:name="com.yusong.club.wxapi.WXPayEntryActivity"-->
+            <!--android:exported="true"-->
+            <!--android:launchMode="singleTop" />-->
+
+        <service android:name="com.yusong.club.InitializeService" />
+
+        <activity
+            android:name="com.yusong.club.pay.CommonPayActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.me.activity.BalanceActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.me.activity.RechargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.video.VideoPlayDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.RoleApplyDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.yusong.club.InitializeService" />
+
+        <activity android:name="com.yusong.club.ui.school.school.activity.SchoolMyInfoAcitivity" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.NoticeDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.user.activity.UserInfoDetailsActivity"
+            android:launchMode="singleTop" />
+
+        <service android:name="com.yusong.club.InitializeService" />
+
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.CreatePhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.CreateVideoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.PhotoDetailActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.VideoDetailActivity" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.CreateActionActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ActionCommentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ActionDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ChooseStudentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.ManagerPhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.school.teacher.activity.EditPhotoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.yusong.club.ui.community.photoview.PhotoViewActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Light.Default" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Light.Default" />
+        <activity android:name="com.yusong.club.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.TeacherLeaveActivity" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.UpLoadStudyVideoActivity" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.ParentLeaveActivity" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.CreateParentLeaveActivity" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.ShowLeaveListActivity" />
+        <activity android:name="com.yusong.club.ui.school.teacher.activity.ManagerVideoActivity" />
+        <activity
+            android:name="com.yusong.club.ui.home.activity.GiraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.school.school.activity.FindSchoolActivity"
+            android:screenOrientation="portrait" />
+        <!-- 社区公告-->
+        <activity
+            android:name="com.yusong.club.ui.community_notice.NoticeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_notice.NoticeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 访客通行-->
+        <activity
+            android:name="com.yusong.club.ui.visitor.ThroughActictiy"
+            android:screenOrientation="portrait" />
+        <!-- 访客通行卡片-->
+        <activity
+            android:name="com.yusong.club.ui.visitor.ThroughCardActivity"
+            android:screenOrientation="portrait" />
+        <!-- 报修报事-->
+        <activity
+            android:name="com.yusong.club.ui.repairs.RepairsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.repairs.RepairsHistoryActivity"
+            android:screenOrientation="portrait" />
+        <!-- 物业缴费-->
+        <activity
+            android:name="com.yusong.club.ui.tenement.TenementActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.tenement.TenementPayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 表扬/投诉-->
+        <activity
+            android:name="com.yusong.club.ui.evaluate.activity.EvaluateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.evaluate.activity.EvaluateDeatailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.evaluate.activity.EvaluateAllCommentActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 超市-->
+        <activity
+            android:name="com.yusong.club.ui.supermarket.SupermarketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.supermarket.AboutSupermarketActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.supermarket.SuperMarketOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.supermarket.SmOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.CommunityServiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.ServiceDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.ServiceConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.AboutServiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.ServiceOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yusong.club.ui.community_service.activity.ServiceOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 超市搜索-->
+        <activity
+            android:name="com.yusong.club.ui.shoppers.activity.FindCommodityActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- share sdk -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <!--<data android:scheme="tencent1106060320" />-->
+                <data android:scheme="tencent1106429290" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调  & 微信支付  合并-->
+        <activity
+            android:name="com.yusong.club.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="541px"
+        android:layout_height="316px"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/base_dialog_layout">
+
+        <TextView
+            android:id="@+id/base_dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="87px"
+            android:layout_marginBottom="1px"
+            android:gravity="center"
+            android:background="@drawable/base_dialog_of_text_view"
+            android:textSize="34px"
+            android:textColor="@color/font_color_3"/>
+
+        <TextView
+            android:id="@+id/base_dialog_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginBottom="1px"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textSize="24px"
+            android:textColor="@color/font_color_3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/base_dialog_cancel_btn"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/base_dialog_of_button_left"/>
+
+
+            <Button
+                android:id="@+id/base_dialog_confirm_btn"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="1px"
+                android:background="@drawable/base_dialog_of_button_right"
+                android:textColor="@color/blue_title"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

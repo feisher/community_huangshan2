@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.school.school.activity.IntroActivity">
+    <include layout="@layout/layout_school_title"/>
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+   <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34px"
+        android:layout_marginBottom="31px"
+        android:gravity="center"
+        android:textSize="34px"
+        android:textColor="@color/font_color_3"
+        android:text="乔司镇大井小学"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/school_intro"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="33px"
+        android:textSize="26px"
+        android:textColor="#888888"
+        android:text="关注世界，关爱生命。十载春秋，芳菲实小，百年籀园，孕育现代“笑园”。 从创校之初的16个教学班，42名教师，523名学生，至今多个校区，多种形式办学，学校从无到有，从小到大，沐浴着新课程改革的春风健步前行。 求索创新，精神本色。国际化办学、配方制课程、差异性教学、特色化建构、创新教育、生命德育以及“上不封顶、下要保底”的评价机制等改革实验，赋予了办学理念——“创适合孩子发展的教育”的无限张力。两项教改实验成果在国内产生影响，“一千零一夜家庭实验室计划”得到温家宝总理的认可，“整理课”得到国家教育部、中国教育报刊社等领导专家的关注和引领，并多次在《人民教育》、《中国教育报》做专版特别报道。 　　对话辐射是实验小学的光荣使命。培训各地教师，支援西部教育，发行籀园文丛，谱写了“实验小学是大家的”的宏伟篇章。 坚持成就美丽，人生快乐启航。实验小学正面向每一个孩子和孩子的差异发展、面向每一位教师和教师的特色发展、面向每一门学科和学科的品牌发展扎实推进，坚守教育的主流价值，为每一位师生的幸福一生奠基、增色。"
+        android:id="@+id/textView3" />-->
+</LinearLayout>

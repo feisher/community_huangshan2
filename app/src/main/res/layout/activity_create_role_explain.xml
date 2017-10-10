@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_role_explain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yusong.club.ui.school.user.activity.CreateRoleExplainActivity">
+    <include layout="@layout/app_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="118px"
+            android:layout_height="118px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="84px"
+            android:background="@mipmap/request_success"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:gravity="center"
+        android:textSize="34px"
+        android:textColor="#333333"
+        android:text="您的申请已提交"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36px"
+        android:gravity="center"
+        android:textSize="34px"
+        android:textColor="#888888"
+        android:text="我们会在24小时内审核并给出结果\n感谢您使用学校APP"/>
+    <Button
+        android:id="@+id/btn_alert_audit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:background="#1DACFF"
+        android:textColor="#fff"
+        android:text="提醒审核"/>
+</LinearLayout>

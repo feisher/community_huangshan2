@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <RelativeLayout
+        android:id="@+id/after_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="22px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:text="放学时间"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/after_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:textColor="#999999"
+            android:textSize="30px" />
+
+        <ImageView
+            android:layout_width="17px"
+            android:layout_height="28px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="29px"
+            android:src="@mipmap/school_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_week_layout"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="1px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:text="选择日期"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="160px"
+            android:layout_marginRight="60px"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="30px" />
+
+        <ImageView
+            android:layout_width="17px"
+            android:layout_height="28px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="29px"
+            android:src="@mipmap/school_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="22px"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:text="节假日除外"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <com.yusong.club.ui.school.teacher.view.SlipButton
+            android:id="@+id/slip_button"
+            android:layout_width="82px"
+            android:layout_height="62px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22px" />
+    </RelativeLayout>
+</LinearLayout>

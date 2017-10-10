@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:gravity="left|top"
+            android:hint="说说有什么要发布，或者要向好邻居求助的吧！"
+            android:paddingLeft="10dp"
+            android:paddingTop="11dp"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_select_img"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_margin="10px"
+            android:background="@drawable/icon_addpic_selector" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:overScrollMode="never"
+            android:paddingLeft="15px"
+            android:scrollbars="none"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="#FFFFFF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="30px"
+        android:background="#E1E1E1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15px"
+        android:text="发布到" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_categorys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15px" />
+
+
+</LinearLayout>

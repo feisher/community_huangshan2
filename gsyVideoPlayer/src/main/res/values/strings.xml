@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tips_not_wifi">您当前正在使用移动网络，继续播放将消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续播放</string>
+    <string name="no_net">当前找不到网络</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="tips_not_wifi_upload_cancel">停止上传</string>
+    <string name="no_url">播放地址无效</string>
+    <string name="tips_not_wifi_upload">您当前正在使用移动网络，继续上传将消耗流量</string>
+    <string name="tips_not_wifi_upload_confirm">继续上传</string>
+    <string name="tips_not_wifi_down">您当前正在使用移动网络，继续下载将消耗流量</string>
+    <string name="tips_not_wifi_down_confirm">继续下载</string>
+    <string name="tips_not_wifi_down_cancel">停止下载</string>
+</resources>

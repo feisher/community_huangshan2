@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="#EFEFF4">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="14px"
+        android:background="#d9d9d9"
+        />
+    <RelativeLayout
+        android:layout_width="640px"
+        android:layout_height="88px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="29px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_6"
+            android:text="订单号:"/>
+
+        <TextView
+            android:id="@+id/tv_orderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_6"
+            tools:text="45642134454"/>
+
+        <TextView
+            android:id="@+id/tv_order_state"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32px"
+            android:textSize="28px"
+            android:textColor="@color/font_color_orange"
+            tools:text="未付款"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160px"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29px"
+                android:textSize="28px"
+                android:textColor="@color/font_color_5"
+                android:text="箱号:"/>
+
+            <TextView
+                android:id="@+id/tv_boxNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:textSize="28px"
+                android:textColor="@color/font_color_5"
+                tools:text="1-1"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_openBox"
+            android:layout_width="162px"
+            android:layout_height="57px"
+            android:layout_marginLeft="448px"
+            android:background="@drawable/order_item_lijipay_button"
+            android:textSize="24px"
+            android:textColor="@color/title_color"
+            android:text="开箱"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9"
+        />
+
+</LinearLayout>

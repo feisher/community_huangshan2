@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/business_bg">
+        <include layout="@layout/layout_school_title"/>
+
+     <!--   <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="287px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/class_tible"/>-->
+        <com.yusong.club.ui.school.teacher.view.NoScrollWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="287px" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="87px"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:src="@mipmap/school_notice"/>
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="60px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="@color/business_bg"/>
+
+            <com.sunfusheng.marqueeview.MarqueeView
+                android:id="@+id/marqueeView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:mvAnimDuration="1000"
+                app:mvInterval="3000"
+                app:mvTextColor="#555555"
+                app:mvTextSize="14sp"
+                app:mvSingleLine="true"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gv_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginTop="11px"
+            android:background="#efeff4"
+            android:horizontalSpacing="1px"
+            android:verticalSpacing="1px"
+            android:numColumns="4">
+
+        </GridView>
+    </LinearLayout>
+</LinearLayout>

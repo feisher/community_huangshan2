@@ -1,0 +1,207 @@
+<resources>
+    <!--全屏加透明 评论页面使用-->
+    <style name="TranslucentFullScreenTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowAnimationStyle">@style/MyActivitySwitchAnimation</item>
+    </style>
+    <!-- window 透明的-->
+    <style name="Theme.AppCompat.Translucent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/MyActivitySwitchAnimation</item>
+    </style>
+
+    <!--统一的动画效果-->
+    <style name="MyActivitySwitchAnimation" parent="@android:style/Animation.Activity">
+        <!--   &lt;!&ndash;窗体进入动画,从右面进入-->
+        <!--<item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>-->
+        <!--&lt;!&ndash;窗体退出动画，往右面划出&ndash;&gt;-->
+        <!--<item name="android:windowExitAnimation">@anim/slide_out_to_right</item>-->
+        <!--详细动画，会被上面的覆盖掉，有待修改-->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right
+        </item><!--1开2 2进-->
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_to_left</item><!--1开2 1出-->
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_left
+        </item> <!--2回1 1进-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right
+        </item><!-- 2回1 2出-->
+
+        <item name="android:fragmentOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/slide_out_to_left</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/slide_in_from_left</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/slide_out_to_right</item>
+
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/ck_box_ban</item>
+        <item name="android:windowAnimationStyle">@style/MyActivitySwitchAnimation</item>
+    </style>
+    <!--主页RadioButton的样式-->
+    <style name="sytle_RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">20px</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!--  订单 radiobutton  -->
+    <style name="RadioButtonCenter">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@drawable/radiobutton_text_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">2px</item>
+        <item name="android:layout_marginBottom">2px</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/radiobutton_center</item>
+    </style>
+
+    <style name="RadioButtonLeft">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@drawable/radiobutton_text_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">2px</item>
+        <item name="android:layout_marginBottom">2px</item>
+        <item name="android:layout_marginLeft">2px</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/radiobutton_left</item>
+    </style>
+
+    <style name="RadioButtonRight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@drawable/radiobutton_text_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">2px</item>
+        <item name="android:layout_marginBottom">2px</item>
+        <item name="android:layout_marginRight">2px</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/radiobutton_right</item>
+    </style>
+
+    <!-- 评分条样式-->
+    <style name="MyRatingBar" parent="@android:style/Widget.Holo.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/rating_bar_style</item>
+    </style>
+
+    <!--商品详情样式-->
+    <style name="information_text">
+        <item name="android:paddingLeft">22px</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">88px</item>
+    </style>
+
+    <!--学校首页样式-->
+    <style name="linear_school_first">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">250px</item>
+        <item name="android:layout_height">230px</item>
+        <item name="android:background">@drawable/shape_school</item>
+    </style>
+
+    <!--学校首页字体样式-->
+    <style name="tv_school_first">
+        <item name="android:textSize">30px</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:layout_marginTop">24px</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BaseDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparency</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="class_date">
+        <item name="android:textSize">24px</item>
+        <item name="android:textColor">@color/font_color_4</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="class_date2">
+        <item name="android:textSize">20px</item>
+        <item name="android:textColor">@color/font_color_4</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="class_date3">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20px</item>
+        <item name="android:textColor">@color/font_color_4</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0px</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--老师编辑评语页面-->
+    <style name="edit_evaluate">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">30px</item>
+        <item name="android:paddingRight">30px</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">88px</item>
+    </style>
+
+    <style name="edit_evaluate_text">
+        <item name="android:textSize">30px</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="devide_line_eee">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1.5dp</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+    <style name="Theme_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="gallery_ucrop_title_text">@string/gallery_ucrop_menu_crop</item>-->
+    </style>
+
+    <style name="Theme_Light.Default" />
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/through_popupwindow_show</item>
+        <item name="android:windowExitAnimation">@anim/through_popupwindow_hide</item>
+    </style>
+</resources>
