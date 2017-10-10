@@ -60,7 +60,6 @@ import com.hyphenate.util.PathUtil;
 
 import java.io.File;
 import java.util.List;
-
 /**
  * you can new an EaseChatFragment to use or you can inherit it to expand.
  * You need call setArguments to pass chatType and userId
@@ -553,73 +552,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                 }
             }
 
-            /**
-             * \~chinese
-             * 有成员被禁言
-             *
-             * @param chatRoomId 聊天室id
-             * @param mutes      禁言的成员
-             * @param expireTime 禁言有效期，单位是毫秒。
-             * @return NA
-             */
-            @Override
-            public void onMuteListAdded(String chatRoomId, List<String> mutes, long expireTime) {
-
-            }
-
-            /**
-             * \~chinese
-             * 成员从禁言列表中移除
-             *
-             * @param chatRoomId 聊天室id
-             * @param mutes      从禁言列表中移除的成员名单
-             * @return NA
-             */
-            @Override
-            public void onMuteListRemoved(String chatRoomId, List<String> mutes) {
-
-            }
-
-            /**
-             * \~chinese
-             * 有成员提升为管理员权限
-             *
-             * @param chatRoomId 聊天室id
-             * @param admin      提升的管理员
-             * @return NA
-             */
-            @Override
-            public void onAdminAdded(String chatRoomId, String admin) {
-
-            }
-
-            /**
-             * \~chinese
-             * 移除管理员权限
-             *
-             * @param chatRoomId 聊天室id
-             * @param admin      被移除的管理员
-             * @return NA
-             */
-            @Override
-            public void onAdminRemoved(String chatRoomId, String admin) {
-
-            }
-
-            /**
-             * \~chinese
-             * 转移拥有者
-             *
-             * @param chatRoomId 聊天室id
-             * @param newOwner   新所有者
-             * @param oldOwner   原聊天室所有者
-             * @return NA
-             */
-            @Override
-            public void onOwnerChanged(String chatRoomId, String newOwner, String oldOwner) {
-
-            }
-
         };
 
         EMClient.getInstance().chatroomManager().addChatRoomChangeListener(chatRoomChangeListener);
@@ -1078,84 +1010,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
                 }
             });
         }
-
-        /**
-         * \~chinese
-         * 有成员被禁言，此处不同于blacklist
-         *
-         * @param groupId    产生禁言的群组id
-         * @param mutes      被禁言的成员列表
-         *                   Map.entry.key 是禁言的成员id，Map.entry.value是禁言动作存在的时间。
-         * @param muteExpire
-         * @return NA
-         */
-        @Override
-        public void onMuteListAdded(String groupId, List<String> mutes, long muteExpire) {
-
-        }
-
-        /**
-         * \~chinese
-         * 有成员从禁言列表中移除，恢复发言权限，此处不同于blacklist
-         *
-         * @param groupId 产生禁言的群组id
-         * @param mutes   有成员从群组禁言列表中移除
-         * @return NA
-         */
-        @Override
-        public void onMuteListRemoved(String groupId, List<String> mutes) {
-
-        }
-
-        /**
-         * \~chinese
-         * 添加成员管理员权限
-         *
-         * @param groupId       添加管理员权限对应的群组
-         * @param administrator 被添加为管理员的成员
-         * @return NA
-         * <p>
-         * \~english
-         * Callback when a member has been changed to admin
-         */
-        @Override
-        public void onAdminAdded(String groupId, String administrator) {
-
-        }
-
-        /**
-         * \~chinese
-         * 取消某管理员权限
-         *
-         * @param groupId       取消管理员权限事件发生的群id
-         * @param administrator 被取消管理员权限的成员
-         *                      <p>
-         *                      \~english
-         *                      Callback when member is removed from admin
-         * @return NA
-         */
-        @Override
-        public void onAdminRemoved(String groupId, String administrator) {
-
-        }
-
-        /**
-         * \~chinese
-         * 转移群组所有者权限
-         *
-         * @param groupId  转移群组所有者权限的群id
-         * @param newOwner 新的群组所有者
-         * @param oldOwner 原群组所有者
-         *                 <p>
-         *                 \~english
-         *                 Callback when chat room ownership has been transferred
-         * @return NA
-         */
-        @Override
-        public void onOwnerChanged(String groupId, String newOwner, String oldOwner) {
-
-        }
-
     }
 
 

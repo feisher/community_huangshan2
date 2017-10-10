@@ -5,15 +5,10 @@ import com.yusong.club.MyApplication;
 
 import greendao.gen.DaoMaster;
 import greendao.gen.DaoSession;
-
-/**
- * <ul>
- * <li>功能说明：</li>
- * <li>作者：杨文新 </li>
- * <li>时间：2017/4/27 12:41 </li>
- * </ul>
+/**数据库管理器
+ * create by feisher on 2017/10/10 12:42
+ * Email：458079442@qq.com
  */
-
 public class GreenDaoManager {
     private static GreenDaoManager mInstance;
     private DaoMaster mDaoMaster;
