@@ -35,7 +35,7 @@ import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.widget.EaseSwitchButton;
 import com.hyphenate.util.EMLog;
 import com.yusong.club.R;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.ui.im.IMModel;
 import com.yusong.club.ui.im.utils.PreferenceManager;
 
@@ -161,7 +161,7 @@ public class SettingsFragment extends Fragment implements OnClickListener {
 		pushNick=(LinearLayout) getView().findViewById(R.id.ll_set_push_nick);
 		edit_custom_appkey = (EditText) getView().findViewById(R.id.edit_custom_appkey);
 
-		settingsModel = IMHelpers.getInstance().getModel();
+		settingsModel = IMHelper.getInstance().getModel();
 		chatOptions = EMClient.getInstance().getOptions();
 		
 		blacklistContainer.setOnClickListener(this);

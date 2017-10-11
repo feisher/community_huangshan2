@@ -45,7 +45,7 @@ import com.hyphenate.media.EMOppositeSurfaceView;
 import com.hyphenate.util.EMLog;
 import com.superrtc.sdk.VideoView;
 import com.yusong.club.R;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.util.UUID;
 
@@ -117,7 +117,7 @@ public class VideoCallActivity extends CallActivity implements OnClickListener {
         }
         setContentView(R.layout.em_activity_video_call);
 
-        IMHelpers.getInstance().isVideoCalling = true;
+        IMHelper.getInstance().isVideoCalling = true;
         callType = 1;
         
         getWindow().addFlags(
@@ -550,7 +550,7 @@ public class VideoCallActivity extends CallActivity implements OnClickListener {
     
     @Override
     protected void onDestroy() {
-        IMHelpers.getInstance().isVideoCalling = false;
+        IMHelper.getInstance().isVideoCalling = false;
         stopMonitor();
         if(isRecording){
             callHelper.stopVideoRecord();

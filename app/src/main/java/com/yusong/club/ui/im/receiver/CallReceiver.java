@@ -19,7 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.hyphenate.util.EMLog;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.ui.im.ui.VideoCallActivity;
 import com.yusong.club.ui.im.ui.VoiceCallActivity;
 
@@ -27,7 +27,7 @@ public class CallReceiver extends BroadcastReceiver{
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		if(!IMHelpers.getInstance().isLoggedIn())
+		if(!IMHelper.getInstance().isLoggedIn())
 		    return;
 		//username
 		String from = intent.getStringExtra("from");

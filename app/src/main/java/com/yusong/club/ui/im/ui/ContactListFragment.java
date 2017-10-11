@@ -33,8 +33,8 @@ import com.hyphenate.easeui.ui.EaseContactListFragment;
 import com.hyphenate.util.EMLog;
 import com.hyphenate.util.NetUtils;
 import com.yusong.club.R;
-import com.yusong.club.ui.im.IMHelpers;
-import com.yusong.club.ui.im.IMHelpers.DataSyncListener;
+import com.yusong.club.ui.im.IMHelper;
+import com.yusong.club.ui.im.IMHelper.DataSyncListener;
 import com.yusong.club.ui.im.db.InviteMessgeDao;
 import com.yusong.club.ui.im.db.UserDao;
 import com.yusong.club.ui.im.widget.ContactItemView;
@@ -73,7 +73,7 @@ public class ContactListFragment extends EaseContactListFragment {
     
     @Override
     public void refresh() {
-        Map<String, EaseUser> m = IMHelpers.getInstance().getContactList();
+        Map<String, EaseUser> m = IMHelper.getInstance().getContactList();
         if (m instanceof Hashtable<?, ?>) {
             //noinspection unchecked
             m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>)m).clone();
@@ -104,7 +104,7 @@ public class ContactListFragment extends EaseContactListFragment {
             }
         });
         //设置联系人数据
-        Map<String, EaseUser> m = IMHelpers.getInstance().getContactList();
+        Map<String, EaseUser> m = IMHelper.getInstance().getContactList();
         if (m instanceof Hashtable<?, ?>) {
             m = (Map<String, EaseUser>) ((Hashtable<String, EaseUser>)m).clone();
         }
@@ -135,17 +135,17 @@ public class ContactListFragment extends EaseContactListFragment {
         
         
         contactSyncListener = new ContactSyncListener();
-        IMHelpers.getInstance().addSyncContactListener(contactSyncListener);
+        IMHelper.getInstance().addSyncContactListener(contactSyncListener);
         
         blackListSyncListener = new BlackListSyncListener();
-        IMHelpers.getInstance().addSyncBlackListListener(blackListSyncListener);
+        IMHelper.getInstance().addSyncBlackListListener(blackListSyncListener);
         
         contactInfoSyncListener = new ContactInfoSyncListener();
-        IMHelpers.getInstance().getUserProfileManager().addSyncContactInfoListener(contactInfoSyncListener);
+        IMHelper.getInstance().getUserProfileManager().addSyncContactInfoListener(contactInfoSyncListener);
         
-        if (IMHelpers.getInstance().isContactsSyncedWithServer()) {
+        if (IMHelper.getInstance().isContactsSyncedWithServer()) {
             loadingView.setVisibility(View.GONE);
-        } else if (IMHelpers.getInstance().isSyncingContactsWithServer()) {
+        } else if (IMHelper.getInstance().isSyncingContactsWithServer()) {
             loadingView.setVisibility(View.VISIBLE);
         }
     }
@@ -154,16 +154,16 @@ public class ContactListFragment extends EaseContactListFragment {
     public void onDestroy() {
         super.onDestroy();
         if (contactSyncListener != null) {
-            IMHelpers.getInstance().removeSyncContactListener(contactSyncListener);
+            IMHelper.getInstance().removeSyncContactListener(contactSyncListener);
             contactSyncListener = null;
         }
         
         if(blackListSyncListener != null){
-            IMHelpers.getInstance().removeSyncBlackListListener(blackListSyncListener);
+            IMHelper.getInstance().removeSyncBlackListListener(blackListSyncListener);
         }
         
         if(contactInfoSyncListener != null){
-            IMHelpers.getInstance().getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
+            IMHelper.getInstance().getUserProfileManager().removeSyncContactInfoListener(contactInfoSyncListener);
         }
     }
     
@@ -236,7 +236,7 @@ public class ContactListFragment extends EaseContactListFragment {
 					// remove user from memory and database
 					UserDao dao = new UserDao(getActivity());
 					dao.deleteContact(tobeDeleteUser.getUsername());
-					IMHelpers.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
+					IMHelper.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
 					getActivity().runOnUiThread(new Runnable() {
 						public void run() {
 							pd.dismiss();

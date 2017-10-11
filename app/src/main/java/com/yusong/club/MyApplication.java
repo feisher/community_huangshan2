@@ -9,7 +9,7 @@ import android.support.multidex.MultiDexApplication;
 import com.mob.MobSDK;
 import com.qihoo360.replugin.RePlugin;
 import com.yusong.club.map.LocationService;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.utils.GreenDaoManager;
 import com.yusong.club.utils.LogUtils;
 import com.yusong.club.utils.ToastUtils;
@@ -26,7 +26,6 @@ public class MyApplication extends MultiDexApplication {
     private static Context mContext;
     private static ProgressDialog mProgressDialog;
     private static MyApplication mInstance;
-    public IMHelpers mIMHelpers = new IMHelpers();
     public static List<WeakReference<Activity>> activityList = new LinkedList<WeakReference<Activity>>();
 
 
@@ -50,7 +49,7 @@ public class MyApplication extends MultiDexApplication {
 //        MobSDK.init(mContext, "20964b731d9b8", "105962f046036019cc934becc4a7f976");
         MobSDK.init(mContext, "21238236eeb10", "f5075c8476ef2e8184b6e0d2909e2a5e");
 
-        mIMHelpers.init(mContext);
+        IMHelper.getInstance().init(mContext);
 
     }
 

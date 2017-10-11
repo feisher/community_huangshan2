@@ -15,7 +15,7 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.SaveCallback;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,7 +162,7 @@ public class ParseManager {
 					String nick = pUser.getString(CONFIG_NICK);
 					ParseFile pFile = pUser.getParseFile(CONFIG_AVATAR);
 					if(callback!=null){
-					    EaseUser user = IMHelpers.getInstance().getContactList().get(username);
+					    EaseUser user = IMHelper.getInstance().getContactList().get(username);
 						if(user!=null){
 							user.setNick(nick);
 							if (pFile != null && pFile.getUrl() != null) {

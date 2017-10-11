@@ -31,7 +31,7 @@ import com.hyphenate.util.PathUtil;
 import com.yusong.club.R;
 import com.yusong.club.ui.MainActivity;
 import com.yusong.club.ui.im.Constant;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.ui.im.domain.RobotUser;
 import com.yusong.club.ui.im.widget.ChatRowVoiceCall;
 import com.yusong.club.ui.me.mvp.entity.UserInfo;
@@ -91,7 +91,7 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentHe
     protected void setUpView() {
         setChatFragmentListener(this);
         if (chatType == Constant.CHATTYPE_SINGLE) {
-            Map<String, RobotUser> robotMap = IMHelpers.getInstance().getRobotList();
+            Map<String, RobotUser> robotMap = IMHelper.getInstance().getRobotList();
             if (robotMap != null && robotMap.containsKey(toChatUsername)) {
                 isRobot = true;
             }

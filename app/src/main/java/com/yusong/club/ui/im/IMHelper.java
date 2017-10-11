@@ -69,7 +69,7 @@ import java.util.UUID;
 
 import greendao.gen.DataBeanDao;
 
-public class IMHelpers {
+public class IMHelper {
     /**
      * data sync listener
      */
@@ -82,7 +82,7 @@ public class IMHelpers {
         void onSyncComplete(boolean success);
     }
 
-    protected static final String TAG = "IMHelpers";
+    protected static final String TAG = "IMHelper";
 
     private EaseUI easeUI;
 
@@ -97,7 +97,7 @@ public class IMHelpers {
 
     private UserProfileManager userProManager;
 
-    public static IMHelpers instance;
+    public static IMHelper instance;
 
     public static IMModel mIMModel;
 
@@ -133,28 +133,18 @@ public class IMHelpers {
     private InviteMessgeDao inviteMessgeDao;
     private UserDao userDao;
 
-    private LocalBroadcastManager broadcastManager;
+    private static LocalBroadcastManager broadcastManager =LocalBroadcastManager.getInstance(MyApplication.getContext());
 
     private boolean isGroupAndContactListenerRegisted;
-    static Context mContext;
 
-    public IMHelpers(){
 
+    public IMHelper(){
     }
-    public  static IMHelpers getInstance(Context context) {
-        mContext = context;
-        synchronized(context){
+    public  static synchronized IMHelper getInstance() {
             if (instance == null) {
-                instance = new IMHelpers();
+                instance = new IMHelper();
             }
-            return instance;
-        }
-    }
-    public  static synchronized IMHelpers getInstance() {
-        mContext = MyApplication.getContext();
-            if (instance == null) {
-                instance = new IMHelpers();
-            }
+
             return instance;
     }
 
@@ -230,7 +220,7 @@ public class IMHelpers {
             EMClient.getInstance().callManager().getCallOptions().setIsSendPushIfOffline(getModel().isPushCall());
 
             setGlobalListeners();
-            broadcastManager = LocalBroadcastManager.getInstance(appContext);
+//            broadcastManager = LocalBroadcastManager.getInstance(mContext);
             initDbDao();
         }
     }
@@ -803,7 +793,7 @@ public class IMHelpers {
 
         @Override
         public void onContactDeleted(String username) {
-            Map<String, EaseUser> localUsers = IMHelpers.getInstance(mContext).getContactList();
+            Map<String, EaseUser> localUsers = IMHelper.getInstance().getContactList();
             localUsers.remove(username);
             userDao.deleteContact(username);
             inviteMessgeDao.deleteMessage(username);

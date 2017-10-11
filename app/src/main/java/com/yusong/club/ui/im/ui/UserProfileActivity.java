@@ -28,7 +28,7 @@ import com.hyphenate.easeui.utils.EaseUserUtils;
 import com.hyphenate.easeui.widget.EaseTitleBar;
 import com.yusong.club.R;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.io.ByteArrayOutputStream;
 
@@ -127,12 +127,12 @@ public class UserProfileActivity extends IMBaseActivity implements OnClickListen
 	}
 
 	public void asyncFetchUserInfo(String username){
-		IMHelpers.getInstance().getUserProfileManager().asyncGetUserInfo(username, new EMValueCallBack<EaseUser>() {
+		IMHelper.getInstance().getUserProfileManager().asyncGetUserInfo(username, new EMValueCallBack<EaseUser>() {
 
 			@Override
 			public void onSuccess(EaseUser user) {
 				if (user != null) {
-				    IMHelpers.getInstance().saveContact(user);
+				    IMHelper.getInstance().saveContact(user);
 				    if(isFinishing()){
 				        return;
 				    }
@@ -187,7 +187,7 @@ public class UserProfileActivity extends IMBaseActivity implements OnClickListen
 
 			@Override
 			public void run() {
-				boolean updatenick = IMHelpers.getInstance().getUserProfileManager().updateCurrentUserNickName(nickName);
+				boolean updatenick = IMHelper.getInstance().getUserProfileManager().updateCurrentUserNickName(nickName);
 				if (UserProfileActivity.this.isFinishing()) {
 					return;
 				}
@@ -269,7 +269,7 @@ public class UserProfileActivity extends IMBaseActivity implements OnClickListen
 
 			@Override
 			public void run() {
-				final String avatarUrl = IMHelpers.getInstance().getUserProfileManager().uploadUserAvatar(data);
+				final String avatarUrl = IMHelper.getInstance().getUserProfileManager().uploadUserAvatar(data);
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {

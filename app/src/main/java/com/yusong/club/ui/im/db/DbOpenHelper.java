@@ -17,7 +17,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 public class DbOpenHelper extends SQLiteOpenHelper {
 
@@ -66,7 +66,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
     }
 
     private static String getUserDatabaseName() {
-        return IMHelpers.getInstance().getCurrentUsernName() + "_demo.db";
+        return IMHelper.getInstance().getCurrentUsernName() + "_demo.db";
     }
 
     @Override

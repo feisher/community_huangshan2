@@ -22,7 +22,7 @@ import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.yusong.club.R;
 import com.yusong.club.ui.base.BaseFragment;
 import com.yusong.club.ui.im.Constant;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.ui.im.runtimepermissions.PermissionsManager;
 import com.yusong.club.ui.im.runtimepermissions.PermissionsResultAction;
 import com.yusong.club.ui.im.ui.ChatActivity;
@@ -64,7 +64,7 @@ public class Msg1Fragment extends BaseFragment {
 
         // unregister this event listener when this activity enters the
         // background
-        IMHelpers sdkHelper = IMHelpers.getInstance();
+        IMHelper sdkHelper = IMHelper.getInstance();
         sdkHelper.pushActivity(getActivity());
 
         EMClient.getInstance().chatManager().addMessageListener(messageListener);
@@ -73,7 +73,7 @@ public class Msg1Fragment extends BaseFragment {
     @Override
     public void onStop() {
         EMClient.getInstance().chatManager().removeMessageListener(messageListener);
-        IMHelpers sdkHelper = IMHelpers.getInstance();
+        IMHelper sdkHelper = IMHelper.getInstance();
         sdkHelper.popActivity(getActivity());
 
         super.onStop();
@@ -121,7 +121,7 @@ public class Msg1Fragment extends BaseFragment {
         mTvTitle.setText("消息");
         initFragment();
         initViewPager();
-        //register broadcast receiver to receive the change of group from IMHelpers
+        //register broadcast receiver to receive the change of group from IMHelper
         registerBroadcastReceiver();
         EMClient.getInstance().contactManager().setContactListener(new MyContactListener());
     }

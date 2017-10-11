@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.hyphenate.chat.EMClient;
 import com.yusong.club.R;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 public class OfflinePushNickActivity extends IMBaseActivity {
 
@@ -58,7 +58,7 @@ public class OfflinePushNickActivity extends IMBaseActivity {
 						} else {
 							runOnUiThread(new Runnable() {
 								public void run() {
-									boolean updatenick = IMHelpers.getInstance().getUserProfileManager().updateCurrentUserNickName(inputNickName.getText().toString());
+									boolean updatenick = IMHelper.getInstance().getUserProfileManager().updateCurrentUserNickName(inputNickName.getText().toString());
 									if (!updatenick) {
 										Toast.makeText(OfflinePushNickActivity.this, "update nickname failed!",
 														Toast.LENGTH_SHORT).show();

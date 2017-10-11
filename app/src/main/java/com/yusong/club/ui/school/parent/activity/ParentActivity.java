@@ -24,7 +24,7 @@ import com.yusong.club.R;
 import com.yusong.club.ui.home.fragment.Msg1Fragment;
 import com.yusong.club.ui.im.Constant;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 import com.yusong.club.ui.im.db.InviteMessgeDao;
 import com.yusong.club.ui.im.runtimepermissions.PermissionsManager;
 import com.yusong.club.ui.im.runtimepermissions.PermissionsResultAction;
@@ -159,7 +159,7 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
         initListener();
 
         inviteMessgeDao = new InviteMessgeDao(this);
-        //register broadcast receiver to receive the change of group from IMHelpers
+        //register broadcast receiver to receive the change of group from IMHelper
         registerBroadcastReceiver();
 
 
@@ -219,7 +219,7 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
 
         // unregister this event listener when this activity enters the
         // background
-        IMHelpers sdkHelper = IMHelpers.getInstance();
+        IMHelper sdkHelper = IMHelper.getInstance();
         sdkHelper.pushActivity(this);
 
         EMClient.getInstance().chatManager().addMessageListener(messageListener);
@@ -228,7 +228,7 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
     @Override
     protected void onStop() {
         EMClient.getInstance().chatManager().removeMessageListener(messageListener);
-        IMHelpers sdkHelper = IMHelpers.getInstance();
+        IMHelper sdkHelper = IMHelper.getInstance();
         sdkHelper.popActivity(this);
 
         super.onStop();

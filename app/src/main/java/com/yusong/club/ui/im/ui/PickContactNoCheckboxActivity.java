@@ -27,7 +27,7 @@ import com.hyphenate.easeui.widget.EaseSidebar;
 import com.yusong.club.R;
 import com.yusong.club.ui.im.Constant;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -77,7 +77,7 @@ public class PickContactNoCheckboxActivity extends IMBaseActivity {
 
 	private void getContactList() {
 		contactList.clear();
-		Map<String, EaseUser> users = IMHelpers.getInstance().getContactList();
+		Map<String, EaseUser> users = IMHelper.getInstance().getContactList();
 		for (Entry<String, EaseUser> entry : users.entrySet()) {
 			if (!entry.getKey().equals(Constant.NEW_FRIENDS_USERNAME) && !entry.getKey().equals(Constant.GROUP_USERNAME) && !entry.getKey().equals(Constant.CHAT_ROOM) && !entry.getKey().equals(Constant.CHAT_ROBOT))
 				contactList.add(entry.getValue());

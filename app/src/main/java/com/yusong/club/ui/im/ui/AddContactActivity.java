@@ -28,7 +28,7 @@ import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.easeui.widget.EaseTitleBar;
 import com.yusong.club.R;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 
 public class AddContactActivity extends IMBaseActivity {
@@ -103,7 +103,7 @@ public class AddContactActivity extends IMBaseActivity {
             return;
         }
 
-        if (IMHelpers.getInstance().getContactList().containsKey(nameText.getText().toString())) {
+        if (IMHelper.getInstance().getContactList().containsKey(nameText.getText().toString())) {
             //let the user know the contact already in your contact list
             if (EMClient.getInstance().contactManager().getBlackListUsernames().contains(nameText.getText().toString())) {
                 new EaseAlertDialog(this, R.string.user_already_in_contactlist).show();

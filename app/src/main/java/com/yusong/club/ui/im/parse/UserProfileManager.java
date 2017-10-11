@@ -5,8 +5,8 @@ import android.content.Context;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.domain.EaseUser;
-import com.yusong.club.ui.im.IMHelpers;
-import com.yusong.club.ui.im.IMHelpers.DataSyncListener;
+import com.yusong.club.ui.im.IMHelper;
+import com.yusong.club.ui.im.IMHelper.DataSyncListener;
 import com.yusong.club.ui.im.utils.PreferenceManager;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class UserProfileManager {
 	/**
 	 * HuanXin sync contact nick and avatar listener
 	 */
-	private List<IMHelpers.DataSyncListener> syncContactInfosListeners;
+	private List<IMHelper.DataSyncListener> syncContactInfosListeners;
 
 	private boolean isSyncingContactInfosWithServer = false;
 
@@ -77,7 +77,7 @@ public class UserProfileManager {
 //				isSyncingContactInfosWithServer = false;
 //				// in case that logout already before server returns,we should
 //				// return immediately
-//				if (!IMHelpers.getInstance().isLoggedIn()) {
+//				if (!IMHelper.getInstance().isLoggedIn()) {
 //					return;
 //				}
 //				if (callback != null) {

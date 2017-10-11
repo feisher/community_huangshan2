@@ -25,7 +25,7 @@ buildscript {
         androidMinSdkVersion = 16
         androidTargetSdkVersion = 25
         androidCompileSdkVersion = 25
-        supportLibraryVersion = '24.2.0'
+        supportLibraryVersion = '25.3.1'
         otherLibraryVersion = '22.2.1'
 
         //ViewLibraries

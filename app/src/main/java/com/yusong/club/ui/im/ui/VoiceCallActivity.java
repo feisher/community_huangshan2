@@ -38,7 +38,7 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
 import com.yusong.club.R;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.util.UUID;
 
@@ -75,7 +75,7 @@ public class VoiceCallActivity extends CallActivity implements OnClickListener {
         }
 		setContentView(R.layout.em_activity_voice_call);
 
-		IMHelpers.getInstance().isVoiceCalling = true;
+		IMHelper.getInstance().isVoiceCalling = true;
 		callType = 0;
 
         comingBtnContainer = (LinearLayout) findViewById(R.id.ll_coming_call);
@@ -394,7 +394,7 @@ public class VoiceCallActivity extends CallActivity implements OnClickListener {
 
     @Override
     protected void onDestroy() {
-        IMHelpers.getInstance().isVoiceCalling = false;
+        IMHelper.getInstance().isVoiceCalling = false;
         stopMonitor();
         super.onDestroy();
     }

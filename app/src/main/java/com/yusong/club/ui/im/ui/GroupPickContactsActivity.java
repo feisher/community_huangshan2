@@ -36,7 +36,7 @@ import com.hyphenate.easeui.widget.EaseTitleBar;
 import com.yusong.club.R;
 import com.yusong.club.ui.im.Constant;
 import com.yusong.club.ui.im.IMBaseActivity;
-import com.yusong.club.ui.im.IMHelpers;
+import com.yusong.club.ui.im.IMHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -83,7 +83,7 @@ public class GroupPickContactsActivity extends IMBaseActivity {
 			existMembers = new ArrayList<String>();
 		// get contact list
 		final List<EaseUser> alluserList = new ArrayList<EaseUser>();
-		for (EaseUser user : IMHelpers.getInstance().getContactList().values()) {
+		for (EaseUser user : IMHelper.getInstance().getContactList().values()) {
 			if (!user.getUsername().equals(Constant.NEW_FRIENDS_USERNAME) & !user.getUsername().equals(Constant.GROUP_USERNAME) & !user.getUsername().equals(Constant.CHAT_ROOM) & !user.getUsername().equals(Constant.CHAT_ROBOT))
 				alluserList.add(user);
 		}
