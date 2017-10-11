@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 
 def APKName = "宇松智慧城市服务"
-def APPLICATIONID = "com.yusong.club"
+def APPLICATIONID = "com.yusong.club1"
 android {
     def gConfiguration = rootProject.extensions.getByName("ext")
     signingConfigs {
@@ -83,16 +83,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
 //    compile files('libs/bolts-tasks-1.4.0.jar')
-    compile files('libs/alipaySDK-20150818.jar')
-    compile files('libs/MobCommons-2017.0914.1125.jar')
-    compile files('libs/MobTools-2017.0914.1125.jar')
-    compile files('libs/ShareSDK-Core-3.1.0.jar')
-    compile files('libs/ShareSDK-QQ-3.1.0.jar')
-    compile files('libs/ShareSDK-ShortMessage-3.1.0.jar')
-    compile files('libs/ShareSDK-Wechat-3.1.0.jar')
-    compile files('libs/ShareSDK-Wechat-Core-3.1.0.jar')
-    compile files('libs/ShareSDK-Wechat-Favorite-3.1.0.jar')
-    compile files('libs/ShareSDK-Wechat-Moments-3.1.0.jar')
     compile 'com.jakewharton:butterknife:5.1.1'
     compile androidDependencies.recyclerView
     compile androidDependencies.support_v4
@@ -133,5 +123,15 @@ dependencies {
     //文本折叠
     compile 'com.zly.widget:collapsed-textview:1.0.4'
     compile(name: 'chargersdk-release', ext: 'aar')
+    compile files('libs/alipaySDK-20150818.jar')
+    compile files('libs/MobCommons-2017.0914.1125.jar')
+    compile files('libs/MobTools-2017.0914.1125.jar')
+    compile files('libs/ShareSDK-Core-3.1.0.jar')
+    compile files('libs/ShareSDK-QQ-3.1.0.jar')
+    compile files('libs/ShareSDK-ShortMessage-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-3.1.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-3.1.0.jar')
 
 }

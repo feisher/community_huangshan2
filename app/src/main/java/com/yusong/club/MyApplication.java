@@ -45,7 +45,7 @@ public class MyApplication extends MultiDexApplication {
             mContext = getApplicationContext();
         }
         GreenDaoManager.getInstance();
-        InitializeService.start(this);
+//        InitializeService.start(this);
         SDKInitializer.initialize(this);//百度地图
         locationService = new LocationService(mContext);
         MobSDK.init(mContext, "21238236eeb10", "f5075c8476ef2e8184b6e0d2909e2a5e");

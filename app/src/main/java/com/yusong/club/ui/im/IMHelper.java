@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -38,6 +37,7 @@ import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.JsonUtils;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
+import com.qihoo360.replugin.loader.b.PluginLocalBroadcastManager;
 import com.yusong.club.MyApplication;
 import com.yusong.club.R;
 import com.yusong.club.ui.home.activity.LoginActivity;
@@ -133,7 +133,8 @@ public class IMHelper {
     private InviteMessgeDao inviteMessgeDao;
     private UserDao userDao;
 
-    private static LocalBroadcastManager broadcastManager =LocalBroadcastManager.getInstance(MyApplication.getContext());
+//    public static LocalBroadcastManager broadcastManager =LocalBroadcastManager.getInstance(MyApplication.getContext());
+    public static  PluginLocalBroadcastManager broadcastManager = (PluginLocalBroadcastManager) PluginLocalBroadcastManager.getInstance(MyApplication.getContext());
 
     private boolean isGroupAndContactListenerRegisted;
 
