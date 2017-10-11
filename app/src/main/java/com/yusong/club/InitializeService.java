@@ -7,7 +7,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.baidu.mapapi.SDKInitializer;
 import com.wanjian.cockroach.Cockroach;
 public class InitializeService extends IntentService {
 
@@ -41,8 +40,6 @@ public class InitializeService extends IntentService {
 
 //        bugly初始化
 //        CrashReport.initCrashReport(getApplicationContext(), "03c653066d", false);
-
-        SDKInitializer.initialize(getApplicationContext());//百度地图
 
         Cockroach.install(new Cockroach.ExceptionHandler() {
             @Override

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
 
+import com.baidu.mapapi.SDKInitializer;
 import com.mob.MobSDK;
 import com.qihoo360.replugin.RePlugin;
 import com.yusong.club.map.LocationService;
@@ -45,12 +46,10 @@ public class MyApplication extends MultiDexApplication {
         }
         GreenDaoManager.getInstance();
         InitializeService.start(this);
+        SDKInitializer.initialize(this);//百度地图
         locationService = new LocationService(mContext);
-//        MobSDK.init(mContext, "20964b731d9b8", "105962f046036019cc934becc4a7f976");
         MobSDK.init(mContext, "21238236eeb10", "f5075c8476ef2e8184b6e0d2909e2a5e");
-
         IMHelper.getInstance().init(mContext);
-
     }
 
     /**

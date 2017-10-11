@@ -144,7 +144,6 @@ public class IMHelper {
             if (instance == null) {
                 instance = new IMHelper();
             }
-
             return instance;
     }
 
