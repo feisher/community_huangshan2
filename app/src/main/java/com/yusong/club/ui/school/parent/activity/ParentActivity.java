@@ -8,7 +8,6 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.LocalBroadcastManager;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +19,7 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.qihoo360.replugin.loader.b.PluginLocalBroadcastManager;
 import com.yusong.club.R;
 import com.yusong.club.ui.home.fragment.Msg1Fragment;
 import com.yusong.club.ui.im.Constant;
@@ -65,7 +65,8 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
     private String SchoolName;
     private String SchoolId;
     private BroadcastReceiver broadcastReceiver;
-    private LocalBroadcastManager broadcastManager;
+//    private LocalBroadcastManager broadcastManager;
+public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
     private InviteMessgeDao inviteMessgeDao;
     private int currentTabIndex = 0;
     // user logged into another device
@@ -235,7 +236,7 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
     }
 
     private void registerBroadcastReceiver() {
-        broadcastManager = LocalBroadcastManager.getInstance(this);
+//        broadcastManager = LocalBroadcastManager.getInstance(this);
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Constant.ACTION_CONTACT_CHANAGED);
         intentFilter.addAction(Constant.ACTION_GROUP_CHANAGED);
