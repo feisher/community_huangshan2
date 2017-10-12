@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.base.BaseWebViewActivity">
+    tools:context="com.yusong.community.ui.base.BaseWebViewActivity">
 
     <include layout="@layout/app_title"/>
     <WebView

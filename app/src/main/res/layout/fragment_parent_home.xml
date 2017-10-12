@@ -16,7 +16,7 @@
             android:layout_height="287px"
             android:scaleType="fitXY"
             android:src="@mipmap/class_tible"/>-->
-        <com.yusong.club.ui.school.teacher.view.NoScrollWebView
+        <com.yusong.community.ui.school.teacher.view.NoScrollWebView
             android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="287px" />

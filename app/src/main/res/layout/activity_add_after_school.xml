@@ -95,7 +95,7 @@
             android:textColor="@color/black"
             android:textSize="30px" />
 
-        <com.yusong.club.ui.school.teacher.view.SlipButton
+        <com.yusong.community.ui.school.teacher.view.SlipButton
             android:id="@+id/slip_button"
             android:layout_width="82px"
             android:layout_height="62px"

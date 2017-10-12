@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.EditEvaluateActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.EditEvaluateActivity">
 
     <include layout="@layout/layout_school_title" />
 
@@ -85,7 +85,7 @@
                 style="@style/edit_evaluate_text"
                 android:text="课堂纪律" />
 
-            <com.yusong.club.ui.school.teacher.view.StarLayout
+            <com.yusong.community.ui.school.teacher.view.StarLayout
                 android:id="@+id/star_jilv"
                 android:layout_width="wrap_content"
                 android:layout_height="32px"
@@ -106,7 +106,7 @@
                 style="@style/edit_evaluate_text"
                 android:text="课堂发言" />
 
-            <com.yusong.club.ui.school.teacher.view.StarLayout
+            <com.yusong.community.ui.school.teacher.view.StarLayout
                 android:id="@+id/star_speaker"
                 android:layout_width="wrap_content"
                 android:layout_height="32px"
@@ -127,7 +127,7 @@
                 style="@style/edit_evaluate_text"
                 android:text="课堂掌握" />
 
-            <com.yusong.club.ui.school.teacher.view.StarLayout
+            <com.yusong.community.ui.school.teacher.view.StarLayout
                 android:id="@+id/star_know"
                 android:layout_width="wrap_content"
                 android:layout_height="32px"
@@ -148,7 +148,7 @@
                 style="@style/edit_evaluate_text"
                 android:text="自主学习" />
 
-            <com.yusong.club.ui.school.teacher.view.StarLayout
+            <com.yusong.community.ui.school.teacher.view.StarLayout
                 android:id="@+id/star_study"
                 android:layout_width="wrap_content"
                 android:layout_height="32px"

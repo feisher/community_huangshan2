@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.user.activity.CreateRoleExplainActivity">
+    tools:context="com.yusong.community.ui.school.user.activity.CreateRoleExplainActivity">
     <include layout="@layout/app_title"/>
     <RelativeLayout
         android:layout_width="match_parent"

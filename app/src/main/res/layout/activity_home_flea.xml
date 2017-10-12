@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/business_bg"
-    tools:context="com.yusong.club.ui.home.activity.FleaActivity">
+    tools:context="com.yusong.community.ui.home.activity.FleaActivity">
     <include layout="@layout/app_title"/>
 
     <android.support.design.widget.TabLayout

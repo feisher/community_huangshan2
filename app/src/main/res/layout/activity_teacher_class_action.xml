@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yusong.club.ui.school.teacher.activity.ClassActionActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.ClassActionActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 
 def APKName = "宇松智慧城市服务"
-def APPLICATIONID = "com.yusong.club1"
+def APPLICATIONID = "com.yusong.club"
 android {
     def gConfiguration = rootProject.extensions.getByName("ext")
     signingConfigs {
@@ -45,7 +45,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [
                     BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
-                    HUANXIN : "1156170619178872#club"
+                    HUANXIN : "1156170619178872#community"
             ];
             signingConfig signingConfigs.config
         }
@@ -53,7 +53,7 @@ android {
             buildConfigField "int", "Server_Url_Index", "0";
             manifestPlaceholders = [
                     BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
-                    HUANXIN : "1156170619178872#club"
+                    HUANXIN : "1156170619178872#community"
             ];
             signingConfig signingConfigs.config
         }

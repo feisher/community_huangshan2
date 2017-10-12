@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.VideoDetailActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.VideoDetailActivity">
 
     <include layout="@layout/layout_school_title" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/mBGA_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,7 +21,7 @@
             android:orientation="vertical">
 
             <include layout="@layout/not_data_layout"/>
-            <com.yusong.club.ui.school.teacher.view.MyGridView
+            <com.yusong.community.ui.school.teacher.view.MyGridView
                 android:id="@+id/gv_List"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -33,7 +33,7 @@
                 android:verticalSpacing="12px" />
 
         </LinearLayout>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
 </LinearLayout>
 

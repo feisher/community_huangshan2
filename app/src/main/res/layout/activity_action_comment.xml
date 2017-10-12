@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.ActionCommentActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.ActionCommentActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
         <include layout="@layout/layout_school_title" />
 
-        <com.yusong.club.utils.bga.BGARefreshLayout
+        <com.yusong.community.utils.bga.BGARefreshLayout
             android:id="@+id/mBGA_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
             </ScrollView>
-        </com.yusong.club.utils.bga.BGARefreshLayout>
+        </com.yusong.community.utils.bga.BGARefreshLayout>
     </LinearLayout>
 
     <include layout="@layout/layout_chat_edit_view" />

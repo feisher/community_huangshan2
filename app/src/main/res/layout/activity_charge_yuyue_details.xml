@@ -181,7 +181,7 @@
             android:layout_marginTop="69px"
             android:orientation="horizontal">
 
-            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+            <com.yusong.community.ui.charge.view.SelectMoneyLayout
                 android:id="@+id/pay_one"
                 android:layout_width="187px"
                 android:layout_height="111px"
@@ -189,7 +189,7 @@
                 android:orientation="vertical"
                 android:background="@drawable/shape_of_pay_putdown"/>
 
-            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+            <com.yusong.community.ui.charge.view.SelectMoneyLayout
                 android:id="@+id/pay_two"
                 android:layout_width="187px"
                 android:layout_height="111px"
@@ -197,7 +197,7 @@
                 android:orientation="vertical"
                 android:background="@drawable/shape_of_pay_putdown"/>
 
-            <com.yusong.club.ui.charge.view.SelectMoneyLayout
+            <com.yusong.community.ui.charge.view.SelectMoneyLayout
                 android:id="@+id/pay_three"
                 android:layout_width="187px"
                 android:layout_height="111px"

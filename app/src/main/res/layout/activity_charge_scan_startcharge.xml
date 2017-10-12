@@ -11,7 +11,7 @@
         android:layout_height="494px"
         android:background="@color/title_color">
 
-        <com.yusong.club.ui.charge.view.AnimationImageView
+        <com.yusong.community.ui.charge.view.AnimationImageView
             android:id="@+id/start_charge_image"
             android:layout_width="309px"
             android:layout_height="309px"

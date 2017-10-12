@@ -11,7 +11,7 @@
         android:background="#fff"
         >
 
-        <com.yusong.club.ui.im.widget.RecyclingImageView
+        <com.yusong.community.ui.im.widget.RecyclingImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

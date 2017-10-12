@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/business_bg"
-    tools:context="com.yusong.club.ui.home.activity.ServiceActivity">
+    android:background="@color/business_bg">
 
     <include layout="@layout/app_title"/>
 

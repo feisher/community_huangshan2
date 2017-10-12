@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.HistoryWorkActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.HistoryWorkActivity">
 
     <include layout="@layout/layout_school_title" />
 
@@ -45,7 +45,7 @@
                 android:src="@mipmap/school_right" />
         </LinearLayout>
     </LinearLayout>
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/mBGA_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -67,5 +67,5 @@
     </ListView>
         </LinearLayout>
 
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 </LinearLayout>

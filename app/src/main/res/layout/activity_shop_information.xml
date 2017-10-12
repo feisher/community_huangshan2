@@ -9,7 +9,7 @@
 
     <include layout="@layout/app_title" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -143,7 +143,7 @@
                         android:background="@mipmap/arrow_right_gray" />
                 </LinearLayout>
 
-                <com.yusong.club.ui.school.teacher.view.flowlayout.TagFlowLayout
+                <com.yusong.community.ui.school.teacher.view.flowlayout.TagFlowLayout
                     android:id="@+id/id_flowlayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -214,7 +214,7 @@
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

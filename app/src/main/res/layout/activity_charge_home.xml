@@ -7,7 +7,7 @@
 
     <include layout="@layout/app_title" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/charge_home_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -133,6 +133,6 @@
             </RelativeLayout>
         </LinearLayout>
 
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
 </LinearLayout>

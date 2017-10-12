@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:background="@color/business_bg"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.DutyTeacherActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.DutyTeacherActivity">
 
     <include layout="@layout/layout_school_title" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/mBGA_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,5 +41,5 @@
                 android:background="@color/white"
                 android:divider="@null"></ListView>
         </LinearLayout>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 </LinearLayout>

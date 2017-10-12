@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.ManagerVideoActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.ManagerVideoActivity">
 
     <ImageView
         android:id="@+id/iv_adaptive_down_api18"
@@ -55,7 +55,7 @@
             android:textSize="32px" />
     </RelativeLayout>
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/mBGA_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -97,7 +97,7 @@
             </LinearLayout>
 
 
-            <com.yusong.club.ui.school.teacher.view.MyGridView
+            <com.yusong.community.ui.school.teacher.view.MyGridView
                 android:id="@+id/lg_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -108,7 +108,7 @@
 
 
         </LinearLayout>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
     <ImageView
         android:layout_width="match_parent"

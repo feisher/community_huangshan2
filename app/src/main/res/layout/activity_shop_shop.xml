@@ -7,14 +7,14 @@
 
     <include layout="@layout/app_title" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/rl_modulename_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/app_title_layout"
         android:orientation="vertical">
 
-        <com.yusong.club.ui.shoppers.view.BaseScrollView
+        <com.yusong.community.ui.shoppers.view.BaseScrollView
             android:id="@+id/base_scrollview"
             android:layout_width="match_parent"
             android:layout_height="0px"
@@ -221,8 +221,8 @@
                         android:layout_height="wrap_content" />
                 </RelativeLayout>
             </LinearLayout>
-        </com.yusong.club.ui.shoppers.view.BaseScrollView>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+        </com.yusong.community.ui.shoppers.view.BaseScrollView>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
     <LinearLayout
         android:id="@+id/shop_title_2"
         android:layout_width="match_parent"

@@ -20,7 +20,7 @@
         android:textColor="@color/font_color_4"
         android:textSize="26px" />
 
-    <com.yusong.club.ui.school.teacher.view.MyGridView
+    <com.yusong.community.ui.school.teacher.view.MyGridView
         android:id="@+id/gv_List"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

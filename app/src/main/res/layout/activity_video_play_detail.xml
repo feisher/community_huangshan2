@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.video.VideoPlayDetailActivity">
+    tools:context="com.yusong.community.ui.video.VideoPlayDetailActivity">
     <ImageView
         android:id="@+id/iv_adaptive_down_api18"
         android:layout_width="match_parent"
         android:layout_height="44px"
         android:background="#000000"/>
-    <com.yusong.club.ui.video.LandLayoutVideo
+    <com.yusong.community.ui.video.LandLayoutVideo
         android:id="@+id/video_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

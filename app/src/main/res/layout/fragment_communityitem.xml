@@ -7,7 +7,7 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="10px"-->
     <!--android:background="#efeff4"/>-->
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/rl_community_item_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +20,7 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
     <!--评论输入框 -->
     <LinearLayout
         android:id="@+id/comment_layout"

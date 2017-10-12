@@ -4,8 +4,8 @@
     android:id="@+id/activity_photo_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yusong.club.ui.community.photoview.PhotoViewActivity">
-    <com.yusong.club.ui.community.photoview.HackyViewPager
+    tools:context="com.yusong.community.ui.community.photoview.PhotoViewActivity">
+    <com.yusong.community.ui.community.photoview.HackyViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

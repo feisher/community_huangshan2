@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.community.activity.HaveCommunityCityActivity">
+    tools:context="com.yusong.community.ui.community.activity.HaveCommunityCityActivity">
     <include layout="@layout/app_title"/>
 
     <RelativeLayout
@@ -22,7 +22,7 @@
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
-        <com.yusong.club.ui.community.view.QuickIndexView
+        <com.yusong.community.ui.community.view.QuickIndexView
             android:id="@+id/quickIndexView"
             android:layout_width="30dp"
             android:layout_height="match_parent"

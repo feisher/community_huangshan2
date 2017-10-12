@@ -9,7 +9,7 @@
 
     <include layout="@layout/not_data_layout" />
 
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/used_item_bga_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,6 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1" />
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
 </LinearLayout>

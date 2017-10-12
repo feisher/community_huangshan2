@@ -39,7 +39,8 @@
         android:layout_alignParentTop="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:id="@+id/ll_top_container"
@@ -60,7 +61,7 @@
                 android:textSize="22sp"
                 android:textColor="@color/voip_interface_text_color"/>
 
-            <com.yusong.club.ui.im.widget.MyChronometer
+            <com.yusong.community.ui.im.widget.MyChronometer
                 android:id="@+id/chronometer"
                 android:visibility="invisible"
                 android:layout_width="wrap_content"

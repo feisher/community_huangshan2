@@ -21,7 +21,7 @@
                 android:id="@+id/title_layout"
                 layout="@layout/app_title"/>
 
-            <com.yusong.club.utils.bga.BGARefreshLayout
+            <com.yusong.community.utils.bga.BGARefreshLayout
                 android:id="@+id/mBGARefreshLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                         </RelativeLayout>
                     </LinearLayout>
                 </ScrollView>
-            </com.yusong.club.utils.bga.BGARefreshLayout>
+            </com.yusong.community.utils.bga.BGARefreshLayout>
         </LinearLayout>
 
         <include layout="@layout/layout_chat_edit_view"/>

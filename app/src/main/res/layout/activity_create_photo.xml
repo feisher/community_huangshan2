@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.CreatePhotoActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.CreatePhotoActivity">
 
     <include layout="@layout/layout_create_photo" />
 

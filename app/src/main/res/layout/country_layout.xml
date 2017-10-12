@@ -6,7 +6,7 @@
               android:gravity="center_horizontal"
               xmlns:su="http://schemas.android.com/apk/res-auto">
 
-    <com.yusong.club.utils.city.ScrollerNumberPicker
+    <com.yusong.community.utils.city.ScrollerNumberPicker
         android:id="@+id/province"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         su:selecredTextSize="20sp"
         su:unitHight="40dp"/>
 
-    <com.yusong.club.utils.city.ScrollerNumberPicker
+    <com.yusong.community.utils.city.ScrollerNumberPicker
         android:id="@+id/city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
         su:selecredTextSize="20sp"
         su:unitHight="40dp"/>
 
-    <com.yusong.club.utils.city.ScrollerNumberPicker
+    <com.yusong.community.utils.city.ScrollerNumberPicker
         android:id="@+id/couny"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

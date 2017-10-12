@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.parent.activity.ParentActivity">
+    tools:context="com.yusong.community.ui.school.parent.activity.ParentActivity">
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.UploadVideoActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.UploadVideoActivity">
 
     <include layout="@layout/layout_school_title" />
 
@@ -56,7 +56,7 @@
                     android:src="@mipmap/add_image"
                     android:visibility="gone" />
 
-                <com.yusong.club.ui.school.teacher.view.MyRecyclerView
+                <com.yusong.community.ui.school.teacher.view.MyRecyclerView
                     android:id="@+id/rv_List"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

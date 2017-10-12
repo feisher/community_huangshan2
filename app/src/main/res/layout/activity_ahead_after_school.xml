@@ -8,6 +8,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.yusong.club.ui.school.teacher.activity.AheadAfterSchoolActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.AheadAfterSchoolActivity">
 
 </RelativeLayout>

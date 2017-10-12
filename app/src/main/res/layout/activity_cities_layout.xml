@@ -66,11 +66,11 @@
             android:layout_height="0.5dp"
             android:background="#BBB"/>
 
-        <com.yusong.club.utils.city.CityPicker
+        <com.yusong.community.utils.city.CityPicker
             android:id="@+id/cp_citypicker"
             android:layout_width="match_parent"
             android:layout_height="380px">
 
-        </com.yusong.club.utils.city.CityPicker>
+        </com.yusong.community.utils.city.CityPicker>
     </LinearLayout>
 </com.zhy.autolayout.AutoLinearLayout>

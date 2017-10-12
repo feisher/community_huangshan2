@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.yusong.club.ui.school.teacher.view.RectImageView
+    <com.yusong.community.ui.school.teacher.view.RectImageView
         android:id="@+id/item_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

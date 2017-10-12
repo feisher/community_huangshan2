@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/business_bg"
-    tools:context="com.yusong.club.ui.school.teacher.activity.AddworkActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.AddworkActivity">
 
     <include layout="@layout/layout_teacher_title"/>
 

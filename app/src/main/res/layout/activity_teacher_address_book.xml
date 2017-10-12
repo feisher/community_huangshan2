@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.AddressBookActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.AddressBookActivity">
     <ImageView
         android:id="@+id/iv_adaptive_down_api18"
         android:layout_width="match_parent"

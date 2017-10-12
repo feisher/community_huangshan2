@@ -21,7 +21,7 @@
             android:textColorHint="#afafaf"
             android:hint="搜索"/>
     </LinearLayout>
-    <com.yusong.club.utils.bga.BGARefreshLayout
+    <com.yusong.community.utils.bga.BGARefreshLayout
         android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -33,6 +33,6 @@
             android:background="@color/white">
 
         </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
-    </com.yusong.club.utils.bga.BGARefreshLayout>
+    </com.yusong.community.utils.bga.BGARefreshLayout>
 
 </LinearLayout>

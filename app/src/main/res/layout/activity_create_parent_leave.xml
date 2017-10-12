@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.yusong.club.ui.school.teacher.activity.CreateParentLeaveActivity">
+    tools:context="com.yusong.community.ui.school.teacher.activity.CreateParentLeaveActivity">
 
     <include layout="@layout/layout_parent_leave" />
 
@@ -163,7 +163,7 @@
         android:textSize="26px" />
 
 
-    <com.yusong.club.ui.school.teacher.view.flowlayout.TagFlowLayout
+    <com.yusong.community.ui.school.teacher.view.flowlayout.TagFlowLayout
         android:id="@+id/id_flowlayout"
         android:layout_marginTop="20px"
         android:layout_width="fill_parent"
