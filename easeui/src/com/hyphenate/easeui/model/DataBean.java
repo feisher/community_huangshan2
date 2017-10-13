@@ -1,10 +1,13 @@
 package com.hyphenate.easeui.model;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Generated;
-import org.greenrobot.greendao.annotation.Id;
+//import org.greenrobot.greendao.annotation.Entity;
+//import org.greenrobot.greendao.annotation.Generated;
+//import org.greenrobot.greendao.annotation.Id;
 
 import java.io.Serializable;
+
+import io.objectbox.annotation.Entity;
+import io.objectbox.annotation.Id;
 
 @Entity
 public class DataBean implements Serializable {
@@ -14,7 +17,8 @@ public class DataBean implements Serializable {
      * type : 1
      * content : 你好啊，
      */
-    @Id(autoincrement = true)
+//    @Id(autoincrement = true)
+    @Id
     private Long id;
     private String ext;
     private String title;
@@ -25,7 +29,7 @@ public class DataBean implements Serializable {
     private String userName;
 
 
-    @Generated(hash = 70288782)
+//    @Generated(hash = 70288782)
     public DataBean(Long id, String ext, String title, int type, String content,
                     boolean flag, String eventTime, String userName) {
         this.id = id;
@@ -38,7 +42,7 @@ public class DataBean implements Serializable {
         this.userName = userName;
     }
 
-    @Generated(hash = 908697775)
+//    @Generated(hash = 908697775)
     public DataBean() {
     }
 

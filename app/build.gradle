@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'io.objectbox'
 
 def APKName = "宇松智慧城市服务"
 def APPLICATIONID = "com.yusong.club"
@@ -43,18 +44,18 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [
-                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
-                    HUANXIN : "1156170619178872#community"
-            ];
+//            manifestPlaceholders = [
+//                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
+//                    HUANXIN : "1156170619178872#community"
+//            ];
             signingConfig signingConfigs.config
         }
         debug {
             buildConfigField "int", "Server_Url_Index", "0";
-            manifestPlaceholders = [
-                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
-                    HUANXIN : "1156170619178872#community"
-            ];
+//            manifestPlaceholders = [
+//                    BAIDUMAP: "sUWpUcOLP5Y0GblBplGF5ijwBoYSWNal",
+//                    HUANXIN : "1156170619178872#community"
+//            ];
             signingConfig signingConfigs.config
         }
         applicationVariants.all { variant ->

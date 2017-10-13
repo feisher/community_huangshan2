@@ -1,9 +1,11 @@
 package com.yusong.community.ui.im;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -55,7 +57,6 @@ import com.yusong.community.ui.im.ui.VoiceCallActivity;
 import com.yusong.community.ui.im.utils.PreferenceManager;
 import com.yusong.community.ui.me.mvp.entity.UserInfo;
 import com.yusong.community.utils.CacheUtils;
-import com.yusong.community.utils.GreenDaoManager;
 import com.yusong.community.utils.LogUtils;
 
 import org.greenrobot.eventbus.EventBus;
@@ -67,7 +68,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import greendao.gen.DataBeanDao;
+import io.objectbox.Box;
 
 public class IMHelper {
     /**
@@ -172,8 +173,6 @@ public class IMHelper {
 
             //register message event listener
             registerMessageListener();
-
-            // TODO: set Call options
             // min video kbps
             int minBitRate = PreferenceManager.getInstance().getCallMinVideoKbps();
             if (minBitRate != -1) {
@@ -226,6 +225,7 @@ public class IMHelper {
     }
 
 
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     private EMOptions initChatOptions() {
         Log.d(TAG, "init HuanXin Options");
 
@@ -245,7 +245,7 @@ public class IMHelper {
 //        options.setHuaweiPushAppId("10492024");
 
         //set custom servers, commonly used in private deployment
-        if (mIMModel.isCustomServerEnable() && mIMModel.getRestServer() != null && mIMModel.getIMServer() != null) {
+        if (mIMModel.isCustomServerEnable() && !TextUtils.isEmpty(mIMModel.getRestServer())&&!TextUtils.isEmpty(mIMModel.getIMServer())) {
             options.setRestServer(mIMModel.getRestServer());
             options.setIMServer(mIMModel.getIMServer());
             if (mIMModel.getIMServer().contains(":")) {
@@ -254,7 +254,7 @@ public class IMHelper {
             }
         }
 
-        if (mIMModel.isCustomAppkeyEnabled() && mIMModel.getCutomAppkey() != null && !mIMModel.getCutomAppkey().isEmpty()) {
+        if (mIMModel.isCustomAppkeyEnabled() &&!TextUtils.isEmpty(mIMModel.getCutomAppkey())) {
             options.setAppKey(mIMModel.getCutomAppkey());
         }
 
@@ -412,8 +412,11 @@ public class IMHelper {
                             TokenInfo tokenInfo = CacheUtils.getTokenInfo(MyApplication.getContext());
                             dataBean.setUserName(tokenInfo.getName());
                             mIntent.putExtra("msg", dataBean);
-                            DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
-                            dataBeanDao.insert(dataBean);
+                            //todo  更换框架
+//                            DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
+//                            dataBeanDao.insert(dataBean);
+                            Box<DataBean> dataBeanBox = MyApplication.boxStore.boxFor(DataBean.class);
+                            dataBeanBox.put(dataBean);
                             if (msgBean.getType() == 1) {
                                 EventBus.getDefault().post(dataBean);
                             }

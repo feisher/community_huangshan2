@@ -7,18 +7,19 @@ import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.hyphenate.easeui.model.MyObjectBox;
 import com.mob.MobSDK;
 import com.qihoo360.replugin.RePlugin;
 import com.yusong.community.map.LocationService;
 import com.yusong.community.ui.im.IMHelper;
-import com.yusong.community.utils.GreenDaoManager;
-import com.yusong.community.utils.LogUtils;
 import com.yusong.community.utils.ToastUtils;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 import java.util.List;
+
+import io.objectbox.BoxStore;
 
 
 public class MyApplication extends MultiDexApplication {
@@ -27,6 +28,7 @@ public class MyApplication extends MultiDexApplication {
     private static Context mContext;
     private static ProgressDialog mProgressDialog;
     private static MyApplication mInstance;
+    public static BoxStore boxStore;
     public static List<WeakReference<Activity>> activityList = new LinkedList<WeakReference<Activity>>();
 
 
@@ -36,16 +38,18 @@ public class MyApplication extends MultiDexApplication {
         if (mInstance == null) {
             mInstance = this;
         }
-        if (BuildConfig.Server_Url_Index == 1) {
-            LogUtils.isLog = false;
-        }
+//        if (BuildConfig.Server_Url_Index == 1) {
+//            LogUtils.isLog = false;
+//        }
         if (RePlugin.getPluginContext() != null) {
             mContext = RePlugin.getPluginContext();
         }else {
             mContext = getApplicationContext();
         }
-        GreenDaoManager.getInstance();
+//        GreenDaoManager.getInstance();
 //        InitializeService.start(this);
+         boxStore = MyObjectBox.builder()
+                .androidContext(this).build();
         SDKInitializer.initialize(this);//百度地图
         locationService = new LocationService(mContext);
         MobSDK.init(mContext, "21238236eeb10", "f5075c8476ef2e8184b6e0d2909e2a5e");

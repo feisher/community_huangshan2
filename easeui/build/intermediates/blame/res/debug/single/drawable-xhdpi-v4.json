@@ -36,6 +36,10 @@
         "source": "H:\\pd\\community_huangshan2\\easeui\\res\\drawable-xhdpi\\ease_chat_send_btn_pressed.9.png"
     },
     {
+        "merged": "H:\\pd\\community_huangshan2\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\objectbox_notification.png",
+        "source": "C:\\Users\\feisher\\.android\\build-cache\\6517dd59861b03212a07a5442770018732f4b6d3\\output\\res\\drawable-xhdpi-v4\\objectbox_notification.png"
+    },
+    {
         "merged": "H:\\pd\\community_huangshan2\\easeui\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "C:\\Users\\feisher\\.android\\build-cache\\498ce719dd6936498a160d3229bedf5ffee4a92a\\output\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },

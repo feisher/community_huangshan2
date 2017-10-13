@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'io.objectbox'
 
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -35,20 +36,20 @@ android {
     useLibrary 'org.apache.http.legacy'
 }
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
-    }
-}
-
-greendao {
-    schemaVersion 1
-    daoPackage 'greendao.gen'
-    targetGenDir 'src'
-}
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+//    }
+//}
+//
+//greendao {
+//    schemaVersion 1
+//    daoPackage 'greendao.gen'
+//    targetGenDir 'src'
+//}
 
 
 dependencies {
@@ -63,8 +64,10 @@ dependencies {
     compile viewDependencies.glide
     compile dataDependencies.eventbus
     compile dataDependencies.gson
-    compile 'org.greenrobot:greendao:3.0.1'
-    compile 'org.greenrobot:greendao-generator:3.0.0'
+//    compile 'org.greenrobot:greendao:3.0.1'
+//    compile 'org.greenrobot:greendao-generator:3.0.0'
+    compile 'io.objectbox:objectbox-android:1.1.0'
+//    compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'//数据库加密
     compile 'com.hyphenate:hyphenate-sdk:3.2.3'
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/bolts-tasks-1.4.0.jar')

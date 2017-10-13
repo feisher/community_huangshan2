@@ -14,6 +14,7 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenu;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuCreator;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
+import com.yusong.community.MyApplication;
 import com.yusong.community.R;
 import com.yusong.community.ui.base.BaseFragment;
 import com.yusong.community.ui.base.DefaultAdapter;
@@ -22,7 +23,6 @@ import com.yusong.community.ui.home.mvp.cache.TokenInfo;
 import com.yusong.community.ui.im.NotifyDetailsActivity;
 import com.yusong.community.utils.AppUtils;
 import com.yusong.community.utils.CacheUtils;
-import com.yusong.community.utils.GreenDaoManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -32,38 +32,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.InjectView;
-import greendao.gen.DataBeanDao;
+import io.objectbox.Box;
 
-
-/**
- * ***********************************************
- * **                ┏┓   ┏┓                    **
- * **                ┏┛┻━━━┛┻┓                  **
- * **                ┃       ┃                  **
- * **                ┃   ━   ┃                  **
- * **                ┃ ┳┛ ┗┳ ┃                  **
- * **                ┃       ┃                  **
- * **                ┃   ┻   ┃                  **
- * **                ┃       ┃                  **
- * **                ┗━┓   ┏━┛                  **
- * **                  ┃   ┃                    **
- * **                  ┃   ┃                    **
- * **                  ┃   ┗━━━┓                **
- * **                  ┃       ┣┓               **
- * **                  ┃       ┏┛               **
- * **                  ┗┓┓┏━┳┓┏┛                **
- * **                   ┃┫┫ ┃┫┫                 **
- * **                  ┗┻┛ ┗┻┛                  **
- * ***********************************************
- * **               神兽助我 扬我神威              **
- * ***********************************************
- * <p>
- * <ul>
- * <li>功能说明：</li>
- * <li>作者：杨文新 </li>
- * <li>时间：17/3/29 16:28 </li>
- * </ul>
- */
 public class NotificationListFragment extends BaseFragment {
 
     @InjectView(R.id.rl_notification)
@@ -88,8 +58,11 @@ public class NotificationListFragment extends BaseFragment {
             if (menuPosition == 0) {// 删除按钮被点击。
                 final DataBean msgBean = mData.get(adapterPosition);
                 mData.remove(msgBean);
-                DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
-                dataBeanDao.deleteByKey(msgBean.getId());
+                //todo  更换框架
+//                DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
+//                dataBeanDao.deleteByKey(msgBean.getId());
+                Box<DataBean> dataBeanBox = MyApplication.boxStore.boxFor(DataBean.class);
+                dataBeanBox.remove(msgBean.getId());
                 mAdapter.notifyDataSetChanged();
             }
         }
@@ -112,8 +85,11 @@ public class NotificationListFragment extends BaseFragment {
     @Override
     public void initData() {
         EventBus.getDefault().register(this);
-        DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
-        List<DataBean> dataBeen = dataBeanDao.loadAll();
+        //todo  更换框架
+//        DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
+//        List<DataBean> dataBeen = dataBeanDao.loadAll();
+        Box<DataBean> dataBeanBox = MyApplication.boxStore.boxFor(DataBean.class);
+        List<DataBean> dataBeen = dataBeanBox.getAll();
         TokenInfo tokenInfo = CacheUtils.getTokenInfo(getActivity());
         if (!AppUtils.listIsEmpty(dataBeen)) {
             for (int i = 0; i < dataBeen.size(); i++) {
@@ -146,8 +122,11 @@ public class NotificationListFragment extends BaseFragment {
             public void onItemClick(View view, Object data, int position) {
                 DataBean msg = (DataBean) data;
                 msg.setFlag(true);
-                DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
-                dataBeanDao.update(msg);
+                //todo 更换框架
+//                DataBeanDao dataBeanDao = GreenDaoManager.getInstance().getSession().getDataBeanDao();
+//                dataBeanDao.update(msg);
+                Box<DataBean> dataBeanBox = MyApplication.boxStore.boxFor(DataBean.class);
+                dataBeanBox.put(msg);
                 startActivity(new Intent(getActivity(), NotifyDetailsActivity.class).putExtra("msg", msg));
             }
         });

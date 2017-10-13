@@ -34,6 +34,13 @@
 ##okio
 -dontwarn okio.**
 -keep class okio.**{*;}
+
+-keepclassmembers class * extends org.greenrobot.greendao.AbstractDao {
+public static java.lang.String TABLENAME;
+}
+-keep class **$Properties
+# If you do not use Rx:
+-dontwarn rx.**
 #
 ## ZFB pay
 -libraryjars libs/alipaySDK-20150818.jar
