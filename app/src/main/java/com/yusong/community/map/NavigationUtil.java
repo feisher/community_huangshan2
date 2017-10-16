@@ -117,7 +117,7 @@ public class NavigationUtil {
         // 获取所有已安装程序的包信息
         List<PackageInfo> packageInfos = packageManager.getInstalledPackages(0);
 
-        packageManager.getInstalledApplications(packageManager.GET_META_DATA);
+        packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
         // 用于存储所有已安装程序的包名
         List<String> packageNames = new ArrayList<String>();
         // 从pinfo中将包名字逐一取出，压入pName list中

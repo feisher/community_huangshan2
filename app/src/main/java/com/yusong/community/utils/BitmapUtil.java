@@ -40,7 +40,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 
 /**Bitmap工具类主要包括获取Bitmap和对Bitmap的操作
  *
@@ -1658,7 +1657,7 @@ public final class BitmapUtil {
      * @param bitmap
      */
     public static File saveBitmapFile(Bitmap bitmap,String fileName){
-        long time = new Date().getTime();
+        long time = System.currentTimeMillis();
         File dirFile = new File(SDCardUtils.getSDPath()+"/cacheImage");
         if(!dirFile.exists()){
             dirFile.mkdir();

@@ -199,7 +199,7 @@ public class IMHelper {
 
             // resolution
             String resolution = PreferenceManager.getInstance().getCallBackCameraResolution();
-            if (resolution.equals("")) {
+            if ("".equals(resolution)) {
                 resolution = PreferenceManager.getInstance().getCallFrontCameraResolution();
             }
             String[] wh = resolution.split("x");

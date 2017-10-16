@@ -60,7 +60,7 @@ public class DiagnoseActivity extends IMBaseActivity implements OnClickListener 
 	}
 
 	private String getVersionName() throws Exception {
-		return EMClient.getInstance().VERSION;
+		return EMClient.VERSION;
 	}
 
 	@Override

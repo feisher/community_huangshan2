@@ -42,8 +42,8 @@ import java.util.Hashtable;
 import java.util.Map;
 
 /**
- * contact list
- * 
+ * create by ss\ on 2017/10/16 12:41
+ * Email：458079442@qq.com
  */
 public class ContactListFragment extends EaseContactListFragment {
     private static final String TAG = ContactListFragment.class.getSimpleName();
@@ -230,7 +230,8 @@ public class ContactListFragment extends EaseContactListFragment {
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
 		new Thread(new Runnable() {
-			public void run() {
+			@Override
+            public void run() {
 				try {
 					EMClient.getInstance().contactManager().deleteContact(tobeDeleteUser.getUsername());
 					// remove user from memory and database
@@ -238,8 +239,10 @@ public class ContactListFragment extends EaseContactListFragment {
 					dao.deleteContact(tobeDeleteUser.getUsername());
 					IMHelper.getInstance().getContactList().remove(tobeDeleteUser.getUsername());
 					getActivity().runOnUiThread(new Runnable() {
-						public void run() {
+						@Override
+                        public void run() {
 							pd.dismiss();
+                            
 							contactList.remove(tobeDeleteUser);
 							contactListLayout.refresh();
 
@@ -247,7 +250,8 @@ public class ContactListFragment extends EaseContactListFragment {
 					});
 				} catch (final Exception e) {
 					getActivity().runOnUiThread(new Runnable() {
-						public void run() {
+						@Override
+                        public void run() {
 							pd.dismiss();
 							Toast.makeText(getActivity(), st2 + e.getMessage(), Toast.LENGTH_LONG).show();
 						}
@@ -265,6 +269,7 @@ public class ContactListFragment extends EaseContactListFragment {
         public void onSyncComplete(final boolean success) {
             EMLog.d(TAG, "on contact list sync success:" + success);
             getActivity().runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     getActivity().runOnUiThread(new Runnable(){
 

@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMPushConfigs;
-import com.yusong.community.R;
 import com.hyphenate.easeui.widget.EaseTitleBar;
 import com.hyphenate.exceptions.HyphenateException;
+import com.yusong.community.R;
 import com.yusong.community.ui.im.IMBaseActivity;
 
 /**
@@ -145,10 +145,11 @@ public class OfflinePushSettingsActivity extends IMBaseActivity implements Compo
     }
 
     private void processPushConfigs(){
-        if(mPushConfigs == null)
+        if(mPushConfigs == null){
             return;
+        }
         if(mPushConfigs.isNoDisturbOn()){
-            status = status.ON;
+            status = Status.ON;
             noDisturbOn.setChecked(true);
             if(mPushConfigs.getNoDisturbStartHour() > 0){
                 status = Status.ON_IN_NIGHT;

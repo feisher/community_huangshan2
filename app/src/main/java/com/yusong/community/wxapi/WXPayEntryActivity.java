@@ -57,7 +57,7 @@ public class WXPayEntryActivity extends AutoLayoutActivity implements IWXAPIEven
     private static OnPayResultListener mPayListener;
 
     public void setOnPayListener(OnPayResultListener listener) {
-        this.mPayListener = listener;
+        mPayListener = listener;
     }
 
     public interface OnPayResultListener {
