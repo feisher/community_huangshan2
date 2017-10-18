@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
+import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -39,7 +40,6 @@ import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.JsonUtils;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.util.EMLog;
-import com.qihoo360.replugin.loader.b.PluginLocalBroadcastManager;
 import com.yusong.community.MyApplication;
 import com.yusong.community.R;
 import com.yusong.community.ui.home.activity.LoginActivity;
@@ -67,10 +67,14 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ExecutorService;
 
 import io.objectbox.Box;
 
 public class IMHelper {
+
+    public ExecutorService poolExecutor;
+
     /**
      * data sync listener
      */
@@ -134,8 +138,8 @@ public class IMHelper {
     private InviteMessgeDao inviteMessgeDao;
     private UserDao userDao;
 
-//    public static LocalBroadcastManager broadcastManager =LocalBroadcastManager.getInstance(MyApplication.getContext());
-    public static  PluginLocalBroadcastManager broadcastManager = (PluginLocalBroadcastManager) PluginLocalBroadcastManager.getInstance(MyApplication.getContext());
+    public static LocalBroadcastManager broadcastManager =LocalBroadcastManager.getInstance(MyApplication.getContext());
+//    public static  PluginLocalBroadcastManager broadcastManager = (PluginLocalBroadcastManager) PluginLocalBroadcastManager.getInstance(MyApplication.getContext());
 
     private boolean isGroupAndContactListenerRegisted;
 
@@ -153,6 +157,7 @@ public class IMHelper {
      * init helper
      */
     public void init(Context mContext) {
+        poolExecutor = MyApplication.poolExecutor;
         mIMModel = new IMModel(mContext);
         EMOptions options = initChatOptions();
         //use default options if options is null
@@ -646,25 +651,26 @@ public class IMHelper {
 
             //user accept your invitation
             boolean hasGroup = false;
-            EMGroup _group = null;
+            EMGroup emGroup = null;
             for (EMGroup group : EMClient.getInstance().groupManager().getAllGroups()) {
                 if (group.getGroupId().equals(groupId)) {
                     hasGroup = true;
-                    _group = group;
+                    emGroup = group;
                     break;
                 }
             }
-            if (!hasGroup)
+            if (!hasGroup) {
                 return;
+            }
 
             InviteMessage msg = new InviteMessage();
             msg.setFrom(groupId);
             msg.setTime(System.currentTimeMillis());
             msg.setGroupId(groupId);
-            msg.setGroupName(_group == null ? groupId : _group.getGroupName());
+            msg.setGroupName(emGroup == null ? groupId : emGroup.getGroupName());
             msg.setReason(reason);
             msg.setGroupInviter(invitee);
-            Log.d(TAG, invitee + "Accept to join the group：" + _group == null ? groupId : _group.getGroupName());
+            Log.d(TAG, invitee + "Accept to join the group：" + emGroup == null ? groupId : emGroup.getGroupName());
             msg.setStatus(InviteMessage.InviteMesageStatus.GROUPINVITATION_ACCEPTED);
             notifyNewInviteMessage(msg);
             broadcastManager.sendBroadcast(new Intent(Constant.ACTION_GROUP_CHANAGED));
@@ -683,8 +689,9 @@ public class IMHelper {
                     break;
                 }
             }
-            if (group == null)
+            if (group == null) {
                 return;
+            }
 
             InviteMessage msg = new InviteMessage();
             msg.setFrom(groupId);
@@ -1153,8 +1160,7 @@ public class IMHelper {
         }
 
         isSyncingGroupsWithServer = true;
-
-        new Thread() {
+        poolExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -1188,9 +1194,9 @@ public class IMHelper {
                         callback.onError(e.getErrorCode(), e.toString());
                     }
                 }
-
             }
-        }.start();
+        });
+
     }
 
     public void noitifyGroupSyncListeners(boolean success) {
@@ -1205,8 +1211,7 @@ public class IMHelper {
         }
 
         isSyncingContactsWithServer = true;
-
-        new Thread() {
+        poolExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 List<String> usernames = null;
@@ -1268,9 +1273,9 @@ public class IMHelper {
                         callback.onError(e.getErrorCode(), e.toString());
                     }
                 }
-
             }
-        }.start();
+        });
+
     }
 
     public void notifyContactsSyncListener(boolean success) {
@@ -1286,8 +1291,7 @@ public class IMHelper {
         }
 
         isSyncingBlackListWithServer = true;
-
-        new Thread() {
+        poolExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 try {
@@ -1321,9 +1325,8 @@ public class IMHelper {
                         callback.onError(e.getErrorCode(), e.toString());
                     }
                 }
-
             }
-        }.start();
+        });
     }
 
     public void notifyBlackListSyncListener(boolean success) {

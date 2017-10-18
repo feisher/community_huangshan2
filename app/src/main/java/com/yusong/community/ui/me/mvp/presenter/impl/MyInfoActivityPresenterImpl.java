@@ -43,7 +43,7 @@ public class MyInfoActivityPresenterImpl extends BasePresenterImpl<IMyInfoActivi
                     @Override
                     public void call(HttpResult<UserInfo> userInfoHttpResult) {
                         if (userInfoHttpResult.data!=null) {
-                            SPUtils.saveObject(mContext, "UserInfo", userInfoHttpResult.data);
+                            SPUtils.saveObject("UserInfo", userInfoHttpResult.data);
                         }
                     }
                 })

@@ -160,7 +160,7 @@ public abstract class IMBaseActivity extends EaseBaseActivity {
         tokenInfo.setId(result.data.id);
         tokenInfo.setExpireIn(result.data.expireIn);
         tokenInfo.setSaveTime(timeMillis);
-        CacheUtils.saveTokenInfo(this, tokenInfo);
+        CacheUtils.saveTokenInfo(tokenInfo);
     }
 
 

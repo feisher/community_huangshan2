@@ -48,7 +48,7 @@ public class BaseWebViewActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        LOGIN_TIMEOUT = false;
+        loginTimeout = false;
     }
 
     @Override

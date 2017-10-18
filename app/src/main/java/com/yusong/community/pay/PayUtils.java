@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.alipay.sdk.app.PayTask;
+import com.yusong.community.MyApplication;
 import com.yusong.community.pay.zfb.PayResult;
 import com.yusong.community.pay.zfb.SignUtils;
 import com.yusong.community.utils.LogUtils;
@@ -78,8 +79,9 @@ public class PayUtils {
             }
         };
         // 必须异步调用
-        Thread payThread = new Thread(payRunnable);
-        payThread.start();
+//        Thread payThread = new Thread(payRunnable);
+        MyApplication.poolExecutor.execute(payRunnable);
+//        payThread.start();
 
         PARTNER = null;// 商户PID
         SELLER = null; // 商户收款账号

@@ -37,7 +37,7 @@ public class MeFregmentPresenterImpl extends BasePresenterImpl<IMeFregmentView> 
                     @Override
                     public void call(HttpResult<UserInfo> userInfoHttpResult) {
                         if (userInfoHttpResult.code==0&&userInfoHttpResult.data!=null) {
-                            SPUtils.saveObject(mContext,"UserInfo",(UserInfo) userInfoHttpResult.data);
+                            SPUtils.saveObject("UserInfo",(UserInfo) userInfoHttpResult.data);
                         }
                     }
                 })

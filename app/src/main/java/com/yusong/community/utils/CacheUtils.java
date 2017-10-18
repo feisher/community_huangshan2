@@ -16,17 +16,17 @@ public class CacheUtils {
 
     //保存社区设置
     public static void saveCommuntitySeting(Context context, CommuntitySetingBean info) {
-        SPUtils.saveObject(context, "seting", info);
+        SPUtils.saveObject( "seting", info);
     }
 
     //获取社区设置
     public static CommuntitySetingBean getCommuntitySeting(Context context) {
-        return (CommuntitySetingBean) SPUtils.readObject(context, "seting");
+        return  SPUtils.readObject( "seting",CommuntitySetingBean.class);
     }
 
     //获取物业电话
     public static String getTenementTel(Context context) {
-        CommuntitySetingBean setingBean = (CommuntitySetingBean) SPUtils.readObject(context, "seting");
+        CommuntitySetingBean setingBean = (CommuntitySetingBean) SPUtils.readObject( "seting",CommuntitySetingBean.class);
         if (setingBean != null) {
             return setingBean.getTel();
         }
@@ -35,7 +35,7 @@ public class CacheUtils {
 
     //获取服务时间
     public static String getServiceTime(Context context) {
-        CommuntitySetingBean setingBean = (CommuntitySetingBean) SPUtils.readObject(context, "seting");
+        CommuntitySetingBean setingBean = (CommuntitySetingBean) SPUtils.readObject( "seting",CommuntitySetingBean.class);
         if (setingBean != null) {
             return setingBean.getServiceTime();
         }
@@ -50,17 +50,17 @@ public class CacheUtils {
      */
     //保存业主信息
     public static void saveOwnerInfo(Context context, OwnerInfo info) {
-        SPUtils.saveObject(context, "OwnerInfo", info);
+        SPUtils.saveObject( "OwnerInfo", info);
     }
 
     //获取业主信息
     public static OwnerInfo getOwnerInfo(Context context) {
-        return (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        return (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
     }
 
     //获取业主姓名
     public static String getProprietorName(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo =  SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getProprietorName();
         }
@@ -69,7 +69,7 @@ public class CacheUtils {
 
     //获取社区名称
     public static String getCommunityName(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getCommunityName();
         }
@@ -78,7 +78,7 @@ public class CacheUtils {
 
     //获取社区id
     public static int getCommunityId(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getCommunityId();
         }
@@ -87,7 +87,7 @@ public class CacheUtils {
 
     //获取业主id
     public static int getProprietorId(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getProprietorId();
         }
@@ -96,7 +96,7 @@ public class CacheUtils {
 
     //获取业主手机
     public static String getMobile(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getMobile();
         }
@@ -105,7 +105,7 @@ public class CacheUtils {
 
     //获取业主地址
     public static String getAddress(Context context) {
-        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject(context, "OwnerInfo");
+        OwnerInfo ownerInfo = (OwnerInfo) SPUtils.readObject( "OwnerInfo",OwnerInfo.class);
         if (ownerInfo != null) {
             return ownerInfo.getAddress();
         }
@@ -115,25 +115,25 @@ public class CacheUtils {
 
     /**
      * 登录信息存/取
-     *
-     * @param context
-     * @return
      */
 
     //保存TokenInfo
-    public static void saveTokenInfo(Context context, TokenInfo info) {
-        SPUtils.saveObject(context, "tokeninfo", info);
+    public static void saveTokenInfo( TokenInfo info) {
+        SPUtils.saveObject("tokeninfo", info);
     }
 
     //获取TokenInfo
     public static TokenInfo getTokenInfo(Context context) {
-        return (TokenInfo) SPUtils.readObject(context, "tokeninfo");
+        return SPUtils.readObject( "tokeninfo",TokenInfo.class);
+//        return (TokenInfo) SPUtils.get( "tokeninfo",new TokenInfo());
+//        return new Gson().fromJson(sp.getString("tokeninfo", ""),TokenInfo.class);
     }
 
     //获取Token
     @Nullable
     public static String getToken(Context context) {
-        TokenInfo tokeninfo = (TokenInfo) SPUtils.readObject(context, "tokeninfo");
+        TokenInfo tokeninfo = (TokenInfo) SPUtils.readObject( "tokeninfo",TokenInfo.class);
+//        TokenInfo tokeninfo = new Gson().fromJson(sp.getString("tokeninfo", ""),TokenInfo.class);
         if (tokeninfo != null) {
             return tokeninfo.getToken();
         }
@@ -142,7 +142,7 @@ public class CacheUtils {
 
     //获取用户Id
     public static int getId(Context context) {
-        TokenInfo tokeninfo = (TokenInfo) SPUtils.readObject(context, "tokeninfo");
+        TokenInfo tokeninfo = (TokenInfo) SPUtils.readObject( "tokeninfo",TokenInfo.class);
         if (tokeninfo != null) {
             return tokeninfo.getId();
         }
@@ -203,7 +203,8 @@ public class CacheUtils {
      * @return
      */
     public static UserInfo getUserInfo(Context context) {
-        return (UserInfo) SPUtils.readObject(context, "UserInfo");
+//       return new Gson().fromJson(sp.getString("UserInfo", ""),UserInfo.class);
+        return (UserInfo) SPUtils.readObject( "UserInfo",UserInfo.class);
     }
 
     /**

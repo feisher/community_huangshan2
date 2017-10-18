@@ -43,7 +43,7 @@ public class IMainActivityPresenterImpl extends BasePresenterImpl<IMainActivityV
                         mView.getUserInfo((UserInfo) result.data);
                         UserInfo mUserInfo = (UserInfo) result.data;
                         if (mUserInfo != null) {
-                            SPUtils.saveObject(mContext, "UserInfo", mUserInfo);
+                            SPUtils.saveObject("UserInfo", mUserInfo);
                         }
 
                     }

@@ -89,7 +89,7 @@ public class TeacherMineFragment extends BaseFragment implements ITeacherMineFra
         tvTitle.setText("我的");
         imMsg.setVisibility(View.GONE);
         llIdno.setVisibility(View.GONE);
-        mAuditStatusEvent = (AuditStatusEvent) SPUtils.readObject(mContext, "AuditStatusEvent");
+        mAuditStatusEvent = (AuditStatusEvent) SPUtils.readObject( "AuditStatusEvent",AuditStatusEvent.class);
         if (mAuditStatusEvent != null) {
             auditStatus = mAuditStatusEvent.getAuditStatus();
             auditMemo = mAuditStatusEvent.getAuditMemo();

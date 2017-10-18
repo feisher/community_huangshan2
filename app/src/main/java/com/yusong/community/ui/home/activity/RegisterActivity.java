@@ -161,7 +161,7 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
     @Override
     protected void onStart() {
         super.onStart();
-        LOGIN_TIMEOUT = false;
+        loginTimeout = false;
     }
 
     @Override

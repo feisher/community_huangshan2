@@ -91,7 +91,7 @@ public class MySettingActivity extends BaseActivity implements IMySettingActivit
     @Override
     public void initData(){
         mContext=MySettingActivity.this;
-        UserInfo userInfo = (UserInfo) SPUtils.readObject(this, "UserInfo");
+        UserInfo userInfo = (UserInfo) SPUtils.readObject( "UserInfo",UserInfo.class);
         if (userInfo!=null) {
             if (!TextUtils.isEmpty(userInfo.getPortrait())) {
                 GlideImgManager.loadCircleImage(this, userInfo.getPortrait(),ivUserIcon);

@@ -54,11 +54,12 @@ import static com.yusong.community.utils.ActivityConstants.REQUEST_CODE_ASK_CALL
  */
 public abstract class BaseActivity extends AutoLayoutActivity {
 
-    public boolean LOGIN_TIMEOUT = true;
+    public boolean loginTimeout = true;
     //当前Activity的弱引用，防止内存泄露
     private WeakReference<Activity> context = null;
     protected static CompositeSubscription mCompositeSubscription;
     public String phoneNumber;
+    public int anInt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -89,7 +90,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
             return;
         }
         int sdkInt = Build.VERSION.SDK_INT;
-        if (sdkInt >= 18) {
+        if (sdkInt >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
             iv.setVisibility(View.VISIBLE);
         } else {
             iv.setVisibility(View.GONE);
@@ -99,18 +100,25 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     protected void initListener() {
     }
 
+    /**
+     * 初始化布局
+     * @return
+     */
     protected abstract int layoutId();
 
     public void initView() {
     }
 
+    /**
+     * 初始化数据
+     */
     public abstract void initData();
 
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (LOGIN_TIMEOUT) {
+        if (loginTimeout) {
             TokenInfo info = CacheUtils.getTokenInfo(this);
             if (info == null) {
                 showMessage("登陆超时，请重新登录！");
@@ -124,7 +132,8 @@ public abstract class BaseActivity extends AutoLayoutActivity {
                 } else {
                     long saveTime = info.getSaveTime();
                     long millis = System.currentTimeMillis();
-                    if ((millis - saveTime) > 1000000) {
+                    anInt = 1000000;
+                    if ((millis - saveTime) > anInt) {
                         AppUtils.loginAsyc(info.getName(), info.getPwd(), Constants.AGENTID);
                     }
                 }
@@ -137,7 +146,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View view = getCurrentFocus();
             if (isHideInput(view, ev)) {
-                HideSoftInput(view.getWindowToken());
+                hideSoftInput(view.getWindowToken());
             }
         }
         return super.dispatchTouchEvent(ev);
@@ -159,7 +168,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
         return false;
     }
 
-    private void HideSoftInput(IBinder token) {
+    private void hideSoftInput(IBinder token) {
         if (token != null) {
             InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             manager.hideSoftInputFromWindow(token,
@@ -218,7 +227,7 @@ public abstract class BaseActivity extends AutoLayoutActivity {
      */
     public void callDirectly(String mobile) {
 
-        if (Build.VERSION.SDK_INT >= 23) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
             int checkCallPhonePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
             if (checkCallPhonePermission != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CODE_ASK_CALL_PHONE);

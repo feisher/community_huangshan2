@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
@@ -18,7 +19,6 @@ import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
-import com.qihoo360.replugin.loader.b.PluginLocalBroadcastManager;
 import com.yusong.community.R;
 import com.yusong.community.ui.base.BaseFragment;
 import com.yusong.community.ui.im.Constant;
@@ -51,8 +51,8 @@ public class Msg1Fragment extends BaseFragment {
     private NotificationListFragment mNotificationListFragment;
 
     private BroadcastReceiver broadcastReceiver;
-//    private LocalBroadcastManager broadcastManager;
-    public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
+    private LocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
+//    public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
 
     @Override
     public View initView() {

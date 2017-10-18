@@ -98,6 +98,6 @@ public class ILoginPresenterImpl extends BasePresenterImpl<ILoginView> implement
         tokenInfo.setExpireIn(result.data.expireIn);
         tokenInfo.setSaveTime(timeMillis);
         tokenInfo.setImAccount(result.data.imAccount);
-        CacheUtils.saveTokenInfo(mContext, tokenInfo);
+        CacheUtils.saveTokenInfo(tokenInfo);
     }
 }

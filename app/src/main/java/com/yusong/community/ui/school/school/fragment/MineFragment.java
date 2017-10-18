@@ -91,7 +91,7 @@ public class MineFragment extends BaseFragment implements IMineFragmentView {
         imMsg.setVisibility(View.GONE);
         llIdno.setVisibility(View.GONE);
         llDuty.setVisibility(View.GONE);
-        mAuditStatusEvent = (AuditStatusEvent) SPUtils.readObject(mContext, "AuditStatusEvent");
+        mAuditStatusEvent = (AuditStatusEvent) SPUtils.readObject( "AuditStatusEvent",AuditStatusEvent.class);
         if (mAuditStatusEvent != null) {
             auditStatus = mAuditStatusEvent.getAuditStatus();
             auditMemo = mAuditStatusEvent.getAuditMemo();

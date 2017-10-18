@@ -3,9 +3,11 @@ package com.yusong.community.utils;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 import android.os.Environment;
 import android.widget.ImageView;
 
@@ -16,6 +18,7 @@ import com.yusong.community.R;
 import com.yusong.community.api.BaseSubscriber;
 import com.yusong.community.api.HttpResult;
 import com.yusong.community.api.HttpUtil;
+import com.yusong.community.ui.MainActivity;
 import com.yusong.community.ui.home.mvp.cache.TokenInfo;
 import com.yusong.community.ui.home.mvp.entity.LoginResult;
 
@@ -44,25 +47,39 @@ import static android.content.Context.ACTIVITY_SERVICE;
 public class AppUtils {
 
 
+
     private AppUtils() {
     }
 
     //获取当前栈顶activity名称
     public static String getTopActivity(Activity context) {
+        ActivityManager am = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {//小于安卓5.0
+            List<ActivityManager.RunningTaskInfo> runningTaskInfos = am.getRunningTasks(1);
+            if ( null!=runningTaskInfos&&!runningTaskInfos.isEmpty()) {
+                return (runningTaskInfos.get(0).topActivity).getClassName();
+            }
+        }
+//        runApp(context);
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+//            List<ActivityManager.RunningAppProcessInfo> processInfos = am.getRunningAppProcesses();
+//            boolean isRun = false;
+//            for(ActivityManager.RunningAppProcessInfo processInfo : processInfos) {
+//                if (processInfo.importance ==ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND){
+//                    isRun = processInfo.processName.equals(context.getPackageName());
+//                }
+//            }
+//            if (isRun ==false) {
+//                //启动应用
+//            }
+//        }
+        return null;
+    }
 
-        ActivityManager manager = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningTaskInfo> runningTaskInfos = manager.getRunningTasks(1);
-
-
-        if (runningTaskInfos != null)
-
-            return (runningTaskInfos.get(0).topActivity).getClassName().toString();
-
-        else
-
-            return null;
-
+    private static void runApp(Activity context) {
+        Intent ootStartIntent = new Intent(context,MainActivity.class);//我们应用的启动页面
+        ootStartIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(ootStartIntent);
     }
 
     /**
@@ -182,7 +199,7 @@ public class AppUtils {
         tokenInfo.setExpireIn(result.data.expireIn);
         tokenInfo.setSaveTime(timeMillis);
         tokenInfo.setImAccount(result.data.imAccount);
-        CacheUtils.saveTokenInfo(MyApplication.getContext(), tokenInfo);
+        CacheUtils.saveTokenInfo(tokenInfo);
     }
 
 
@@ -371,8 +388,7 @@ public class AppUtils {
 
         final InputStream[] netFileInputStream = {null};
         try {
-
-            new Thread(new Runnable() {
+            MyApplication.poolExecutor.execute(new Runnable() {
                 @Override
                 public void run() {
                     URL url = null;
@@ -385,7 +401,7 @@ public class AppUtils {
                     }
 
                 }
-            }).start();
+            });
 
             if (null != netFileInputStream[0]) {
                 return true;
@@ -396,8 +412,9 @@ public class AppUtils {
             return false;
         } finally {
             try {
-                if (netFileInputStream[0] != null)
+                if (netFileInputStream[0] != null) {
                     netFileInputStream[0].close();
+                }
             } catch (IOException e) {
             }
         }

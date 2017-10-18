@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.easeui.widget.EaseTitleBar;
+import com.yusong.community.MyApplication;
 import com.yusong.community.R;
 import com.yusong.community.ui.im.IMBaseActivity;
 import com.yusong.community.ui.im.IMHelper;
@@ -118,10 +119,9 @@ public class AddContactActivity extends IMBaseActivity {
         progressDialog.setMessage(stri);
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
-
-        new Thread(new Runnable() {
+        MyApplication.poolExecutor.execute(new Runnable() {
+            @Override
             public void run() {
-
                 try {
                     //demo use a hardcode reason here, you need let user to input if you like
                     String s = getResources().getString(R.string.Add_a_friend);
@@ -143,9 +143,11 @@ public class AddContactActivity extends IMBaseActivity {
                     });
                 }
             }
-        }).start();
+        });
+
     }
 
+    @Override
     public void back(View v) {
         finish();
     }

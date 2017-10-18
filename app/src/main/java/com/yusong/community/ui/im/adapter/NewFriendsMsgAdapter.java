@@ -29,6 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hyphenate.chat.EMClient;
+import com.yusong.community.MyApplication;
 import com.yusong.community.R;
 import com.yusong.community.ui.im.db.InviteMessgeDao;
 import com.yusong.community.ui.im.domain.InviteMessage;
@@ -176,8 +177,8 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 		pd.setMessage(str1);
 		pd.setCanceledOnTouchOutside(false);
 		pd.show();
-
-		new Thread(new Runnable() {
+		MyApplication.poolExecutor.execute(new Runnable() {
+			@Override
 			public void run() {
 				// call api
 				try {
@@ -217,7 +218,7 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 
 				}
 			}
-		}).start();
+		});
 	}
 	
 	/**

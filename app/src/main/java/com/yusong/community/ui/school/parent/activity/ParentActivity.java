@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -19,7 +20,6 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
-import com.qihoo360.replugin.loader.b.PluginLocalBroadcastManager;
 import com.yusong.community.R;
 import com.yusong.community.ui.home.fragment.Msg1Fragment;
 import com.yusong.community.ui.im.Constant;
@@ -65,8 +65,8 @@ public class ParentActivity extends IMBaseActivity implements RadioGroup.OnCheck
     private String SchoolName;
     private String SchoolId;
     private BroadcastReceiver broadcastReceiver;
-//    private LocalBroadcastManager broadcastManager;
-public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
+    private LocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
+//public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastManager;
     private InviteMessgeDao inviteMessgeDao;
     private int currentTabIndex = 0;
     // user logged into another device
@@ -169,6 +169,7 @@ public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastM
 
     private void refreshUIWithMessage() {
         runOnUiThread(new Runnable() {
+            @Override
             public void run() {
                 // refresh unread count
 //                updateUnreadLabel();
@@ -276,6 +277,7 @@ public static PluginLocalBroadcastManager broadcastManager = IMHelper.broadcastM
         @Override
         public void onContactDeleted(final String username) {
             runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     if (ChatActivity.activityInstance != null && ChatActivity.activityInstance.toChatUsername != null &&
                             username.equals(ChatActivity.activityInstance.toChatUsername)) {

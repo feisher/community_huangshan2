@@ -9,7 +9,7 @@ import android.support.multidex.MultiDexApplication;
 import com.baidu.mapapi.SDKInitializer;
 import com.hyphenate.easeui.model.MyObjectBox;
 import com.mob.MobSDK;
-import com.qihoo360.replugin.RePlugin;
+
 import com.yusong.community.map.LocationService;
 import com.yusong.community.ui.im.IMHelper;
 import com.yusong.community.utils.ToastUtils;
@@ -18,6 +18,10 @@ import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import io.objectbox.BoxStore;
 
@@ -30,6 +34,8 @@ public class MyApplication extends MultiDexApplication {
     private static MyApplication mInstance;
     public static BoxStore boxStore;
     public static List<WeakReference<Activity>> activityList = new LinkedList<WeakReference<Activity>>();
+    public static ExecutorService poolExecutor = new ThreadPoolExecutor(3, 5,
+            1, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(128));
 
 
     @Override
@@ -41,11 +47,11 @@ public class MyApplication extends MultiDexApplication {
 //        if (BuildConfig.Server_Url_Index == 1) {
 //            LogUtils.isLog = false;
 //        }
-        if (RePlugin.getPluginContext() != null) {
-            mContext = RePlugin.getPluginContext();
-        }else {
+//        if (RePlugin.getPluginContext() != null) {
+//            mContext = RePlugin.getPluginContext();
+//        }else {
             mContext = getApplicationContext();
-        }
+//        }
 //        GreenDaoManager.getInstance();
 //        InitializeService.start(this);
          boxStore = MyObjectBox.builder()

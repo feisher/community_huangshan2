@@ -17,6 +17,7 @@ public class TokenInfo implements Serializable{
     long saveTime;
     public String imAccount;
 
+
     public String getImAccount() {
         return imAccount;
     }
