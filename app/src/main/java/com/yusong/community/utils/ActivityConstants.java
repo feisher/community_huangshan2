@@ -84,6 +84,7 @@ public class ActivityConstants {
     public static final int RESULT_CODE = 100;//商城acitvity标记
     public static final int REQUEST_CODE = 50;//商城acitvity标记
     public static final int REQUEST_CODE_ASK_CALL_PHONE = 1000;//拨号动态权限
+    public static final int REQUEST_CODE_ASK_CAMERA = 154;//相机权限
 
 }
 

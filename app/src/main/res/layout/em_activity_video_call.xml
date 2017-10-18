@@ -89,7 +89,6 @@
 
            <!-- 演示视频录制功能 -->
         <Button
-            android:id="@+id/btn_record_video"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

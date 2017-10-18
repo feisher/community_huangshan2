@@ -34,7 +34,6 @@
             >
 
             <TextView
-                android:id="@+id/tv_boxName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="33px"
@@ -53,7 +52,6 @@
         >
 
         <Button
-            android:id="@+id/btn_sender"
             android:layout_width="169px"
             android:layout_height="61px"
             android:layout_marginLeft="28px"
@@ -104,7 +102,6 @@
         />
 
     <TextView
-        android:id="@+id/tv_box_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30px"

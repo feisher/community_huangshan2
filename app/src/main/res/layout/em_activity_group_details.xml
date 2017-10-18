@@ -221,7 +221,6 @@
                     android:background="#E6E6E6"/>
 
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -231,7 +230,8 @@
                     android:textSize="32px"
                     android:typeface="serif"
                     android:textColor="@android:color/black"
-                    android:text="@string/blacklist"/>
+                    android:text="@string/blacklist"
+                    android:layout_alignParentLeft="true" />
             </RelativeLayout>
 
             <RelativeLayout

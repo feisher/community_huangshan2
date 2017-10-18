@@ -22,6 +22,8 @@ import com.yusong.community.ui.charge.mvp.implView.IChargeQueryDetailsView;
 import com.yusong.community.ui.charge.mvp.implView.IChargeScanView;
 import com.yusong.community.ui.charge.mvp.presenter.impl.IChargeQueryDetailsPresenterImpl;
 import com.yusong.community.ui.charge.mvp.presenter.impl.IChargeScanPresenterimpl;
+import com.yusong.community.ui.home.mvp.cache.TokenInfo;
+import com.yusong.community.utils.CacheUtils;
 
 import java.util.List;
 
@@ -62,7 +64,19 @@ public class ScanChargeActivity extends BaseActivity implements QRCodeView.Deleg
     public void onScanQRCodeSuccess(String result) {
         code = result;
         Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
-        scanPresenterimpl.scanCharge(result);
+        //todo 添加集成hybrid充电桩
+        if (result.contains("scan_qrcode/index.htm?qrcode")) {
+            Intent intent = new Intent();
+            intent.setClassName(getPackageName(),"com.yusong.chargersdk.ui.QRCodeActivity");
+            intent.putExtra("qrcodeStr",result);
+            TokenInfo tokenInfo = CacheUtils.getTokenInfo(getApplicationContext());
+            if (tokenInfo!=null) {
+                intent.putExtra("mobile", tokenInfo.getName());
+                startActivity(intent);
+            }
+        }else {
+            scanPresenterimpl.scanCharge(result);
+        }
         vibrate();
         zbarview.startSpot();
     }

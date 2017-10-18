@@ -1,8 +1,13 @@
 package com.yusong.community.ui.home.fragment;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -12,9 +17,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.youth.banner.Banner;
+import com.yusong.chargersdk.entity.CallScan;
 import com.yusong.chargersdk.entity.LocationBean;
 import com.yusong.community.MyApplication;
 import com.yusong.community.R;
@@ -22,6 +29,7 @@ import com.yusong.community.map.LocationService;
 import com.yusong.community.ui.base.BaseFragment;
 import com.yusong.community.ui.base.BaseWebViewActivity;
 import com.yusong.community.ui.base.DefaultAdapter;
+import com.yusong.community.ui.charge.activity.ScanChargeActivity;
 import com.yusong.community.ui.community_notice.NoticeActivity;
 import com.yusong.community.ui.community_service.activity.CommunityServiceActivity;
 import com.yusong.community.ui.evaluate.activity.EvaluateActivity;
@@ -76,6 +84,8 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+
+import static com.yusong.community.utils.ActivityConstants.REQUEST_CODE_ASK_CAMERA;
 
 
 /**
@@ -307,7 +317,7 @@ public class HomeFragment extends BaseFragment implements IRegisterView, BGARefr
         bundle.putString("mobile", userInfo != null ? userInfo.getMobile() : "17130044331");
         bundle.putString("nikeName", userInfo != null ? userInfo.getNickname() : "feisher");
 //                        bundle.putString("portraitUrl","https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png");
-        bundle.putString("portraitUrl", userInfo != null ? userInfo.getPortrait() : "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png");
+        bundle.putString("portraitUrl", userInfo != null ? userInfo.getPortrait() : "");
         bundle.putString("addrStr", addrStr);
         bundle.putInt("cityCode", cityCode);
         bundle.putString("province", province);
@@ -331,6 +341,39 @@ public class HomeFragment extends BaseFragment implements IRegisterView, BGARefr
         latitude = event.getLat();
         longitude = event.getLng();
         Log.d("feisher", "接收到结果：" + new Gson().toJson(event));
+    }
+    /**
+     * 接收到扫码广播调起扫码界面
+     * @param event
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN) //
+    public void onCallScanEvent(CallScan event) {
+        gotoQRCode();
+    }
+    /**
+     * 跳转二维码扫描界面
+     */
+    private void gotoQRCode() {
+        int i = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA);
+        if (i != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, REQUEST_CODE_ASK_CAMERA);
+            return;
+        }
+        startActivity(new Intent(getActivity(), ScanChargeActivity.class));
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode==REQUEST_CODE_ASK_CAMERA) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                gotoQRCode();
+            }else {
+                Toast.makeText(getContext(), "请授予应用相机权限后重试", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        }
     }
 
     public String addrStr;

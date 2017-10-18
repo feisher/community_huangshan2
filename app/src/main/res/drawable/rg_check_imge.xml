@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@mipmap/rg_check_seleted" android:state_checked="true"></item>
-    <item android:drawable="@mipmap/rg_check_unseleted"></item>
-
-</selector>

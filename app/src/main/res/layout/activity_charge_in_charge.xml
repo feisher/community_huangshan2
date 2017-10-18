@@ -18,13 +18,11 @@
         <!--android:layout_centerInParent="true"/>-->
 
         <ProgressBar
-            android:id="@+id/inCharge_bar"
             android:layout_width="309px"
             android:layout_height="309px"
             android:layout_centerInParent="true" />
 
         <TextView
-            android:id="@+id/inCharge_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

@@ -6,7 +6,6 @@
     android:background="#f2f0eb">
 
     <RelativeLayout
-        android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_top_bar"
         android:gravity="center_vertical"
@@ -42,7 +41,6 @@
         </RelativeLayout> -->
 
         <RelativeLayout
-            android:id="@+id/container_to_group"
             android:visibility="gone"
             android:layout_width="50dp"
             android:layout_height="match_parent"
