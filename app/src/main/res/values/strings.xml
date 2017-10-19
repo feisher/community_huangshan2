@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">汇聚</string>
+    <string name="app_name">慧聚</string>
     <!-- 充电桩模块 -->
     <string name="appoint_charging_text">预约充电</string>
     <string name="city_fast_charging_text">城市快充</string>

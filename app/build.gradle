@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 //apply plugin: 'org.greenrobot.greendao'
 apply plugin: 'io.objectbox'
 
-def APKName = "汇聚"
+def APKName = "慧聚"
 def APPLICATIONID = "com.yusong.club"
 android {
     def gConfiguration = rootProject.extensions.getByName("ext")
@@ -24,8 +24,8 @@ android {
         applicationId APPLICATIONID
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 3
-        versionName "0.0.3"
+        versionCode 4
+        versionName "0.0.4"
         multiDexEnabled true
         signingConfig signingConfigs.config
         resConfigs "zh"
